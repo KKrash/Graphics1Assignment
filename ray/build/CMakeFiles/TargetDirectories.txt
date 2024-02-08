@@ -1,0 +1,3 @@
+/u/karahp22/Graphics/ray/build/CMakeFiles/rebuild_cache.dir
+/u/karahp22/Graphics/ray/build/CMakeFiles/edit_cache.dir
+/u/karahp22/Graphics/ray/build/CMakeFiles/ray.dir
