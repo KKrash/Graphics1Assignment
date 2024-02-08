@@ -120,6 +120,7 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
 
     if ((m.kt(i)[0] > 0 || m.kt(i)[1] > 0 || m.kt(i)[2] > 0) && n_i < n_t)
     {
+      // now we refract
       //T = refractDirection (n_i, n_t, N, -d)
       //I ← I + mtrl.kt ∗ traceRay(scene, Q, T)
       glm::dvec3 T = glm::refract(-r.getDirection(), i.getN(), (n_i/n_t));
