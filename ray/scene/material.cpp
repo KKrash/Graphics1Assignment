@@ -17,26 +17,6 @@ Material::~Material() {}
 // the color of that point.
 glm::dvec3 Material::shade(Scene *scene, const ray &r, const isect &i) const {
   // YOUR CODE HERE
-
-  // Your mission is to fill in this method with the rest of the phong
-  // shading model, including the contributions of all the light sources.
-  // You will need to call both distanceAttenuation() and
-  // shadowAttenuation()
-  // somewhere in your code in order to compute shadows and light falloff.
-  //	if( debugMode )
-  //		std::cout << "Debugging Phong code..." << std::endl;
-
-  // When you're iterating through the lights,
-  // you'll want to use code that looks something
-  // like this:
-  //
-  // for ( const auto& pLight : scene->getAllLights() )
-  // {
-  //              // pLight has type Light*
-  // 		.
-  // 		.
-  // 		.
-  // }
  
   glm::dvec3 Q = r.at(i.getT());
   glm::dvec3 IBase = ke(i) + ka(i)*scene->ambient();

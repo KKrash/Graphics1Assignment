@@ -115,15 +115,21 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
     }
     double n_r = n_i/n_t;
  // Determining TIR⃗
-    double dotty = glm::dot(i.getN(), -r.getDirection());
-    glm::dvec3 refract = (n_r*(dotty)- glm::sqrt(1 - (n_r * n_r) * (1 - (dotty*dotty)))* (i.getN()-(n_r)*-r.getDirection()));
+    double dotty = glm::dot(i.getN(), r.getDirection());
+    //glm::dvec3 refract = (n_r*(dotty)- glm::sqrt(1 - (n_r * n_r) * (1 - (dotty*dotty)))* (i.getN()-(n_r)*r.getDirection()));
 
     if ((m.kt(i)[0] > 0 || m.kt(i)[1] > 0 || m.kt(i)[2] > 0) && n_i < n_t)
     {
       // now we refract
-      //T = refractDirection (n_i, n_t, N, -d)
-      //I ← I + mtrl.kt ∗ traceRay(scene, Q, T)
-      glm::dvec3 T = glm::refract(-r.getDirection(), i.getN(), (n_i/n_t));
+      glm::dvec3 T;
+      if (dotty < 0) // entering
+      {
+        T = glm::refract(r.getDirection(), i.getN(), (n_i/n_t));
+      }
+      else if (dotty > 0) // exitting
+      {
+        T = glm::refract(r.getDirection(), -i.getN(), (n_i/n_t));
+      }
       ray R_refract = ray(r);
       R_refract.setPosition(Q);
       R_refract.setDirection(T);
