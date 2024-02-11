@@ -1,4 +1,4 @@
-# Install script for directory: /u/karahp22/Graphics/ray
+# Install script for directory: /u/sashankm/Graphics1Assignment/ray
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/u/karahp22/Graphics/ray/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/u/sashankm/Graphics1Assignment/ray/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

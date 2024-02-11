@@ -22,7 +22,7 @@ glm::dvec3 DirectionalLight::shadowAttenuation(const ray &r,
     bool intersectQ = scene->intersect(r2, i);
     glm::dvec3 Q = r2.at(i.getT());
     if (intersectQ) {
-        return glm::dvec3(0, 0, 0);
+        return i.getMaterial().kt(i);
     } 
   
   return glm::dvec3(1, 1, 1);
@@ -62,7 +62,7 @@ glm::dvec3 PointLight::shadowAttenuation(const ray &r,
     if (intersectQ) {
       glm::dvec3 b = glm::lessThan(p, Q);
       if (b[0] == 1.0) {
-        return glm::dvec3(0, 0, 0);
+        return i.getMaterial().kt(i);
       }
     } 
   

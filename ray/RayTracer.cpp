@@ -103,37 +103,44 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
     R.setPosition(Q);
     I = I + m.kr(i) * traceRay(R, thresh, depth-1, t);
     
-    if(intersection)
+
+    //double n_r = n_i/n_t;
+ // Determining TIR⃗
+    double dotty = glm::dot(i.getN(), -r.getDirection());
+    if(dotty > 0)
     {
       n_i = 1; // air index
       n_t = m.index(i);
     }
-    else
+    else if (dotty < 0)
     {
       n_t = 1; // air index
       n_i = m.index(i);
     }
-    double n_r = n_i/n_t;
- // Determining TIR⃗
-    double dotty = glm::dot(i.getN(), r.getDirection());
     //glm::dvec3 refract = (n_r*(dotty)- glm::sqrt(1 - (n_r * n_r) * (1 - (dotty*dotty)))* (i.getN()-(n_r)*r.getDirection()));
-
-    if ((m.kt(i)[0] > 0 || m.kt(i)[1] > 0 || m.kt(i)[2] > 0) && n_i < n_t)
+    double nSquare = std::pow((n_i/n_t), 2);
+    double cosine = std::sqrt(1-nSquare*(1-(std::pow(dotty, 2))));
+    if ((m.kt(i)[0] > 0 || m.kt(i)[1] > 0 || m.kt(i)[2] > 0) && cosine > 0)
     {
       // now we refract
       glm::dvec3 T;
-      if (dotty < 0) // entering
+      if (dotty > 0) // entering
       {
         T = glm::refract(r.getDirection(), i.getN(), (n_i/n_t));
       }
-      else if (dotty > 0) // exitting
+      else if (dotty < 0) // exitting
       {
+        // cout << "refract";
         T = glm::refract(r.getDirection(), -i.getN(), (n_i/n_t));
       }
-      ray R_refract = ray(r);
-      R_refract.setPosition(Q);
-      R_refract.setDirection(T);
+      ray R_refract (Q, T, glm::dvec3(0.0), ray::REFRACTION);
       I = I + m.kt(i) * traceRay(R_refract, thresh, depth-1, t);
+    }
+    else // TIR
+    {
+      glm::dvec3 Ref = glm::reflect(r.getDirection(), i.getN());
+      ray R_reflect (Q, Ref, glm::dvec3(0.0), ray::REFRACTION);
+      I = I + m.kr(i) * traceRay(R_reflect, thresh, depth-1, t);
     }
 
   } else {

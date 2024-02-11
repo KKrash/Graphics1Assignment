@@ -100,9 +100,25 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
   //        UNDER VARIABLE "NORMAL"  
   Trimesh::UVCoords UVCoor = parent->uvCoords;
   Trimesh::VertColors VColors = parent->vertColors;
+  
   if(UVCoor.size() != 0)
   {
     // barycentrically interpolate UV Coordinates the 3 vertices of the face
+    glm::dvec3 Q = r.at(i.getT());
+    double alpha = Q[0];
+    double beta = Q[1];
+    double gamma = Q[2];
+
+    double A = normal[0];
+    double B = normal[1];
+    double C = normal[2];
+
+    double u = A-C;
+    double v = B-C;
+    double t = C;
+
+
+    
     // i.setUVCoordinates();
   }
   else if(VColors.size() != 0)
