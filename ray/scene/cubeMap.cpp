@@ -9,33 +9,46 @@ glm::dvec3 CubeMap::getColor(ray r) const {
   // FIXME: Implement Cube Map here
 
   // look at each value and figure out which one is the largest out of the three
-  // (pos and neg?)
-  glm::dvec3 posi = r.getPosition();
-  TextureMap textMap = TextureMap("filename"); // I don't know if I'm supposed to pass in something else
+  // and then set the u and v coordinates accordingly
 
-  // have to check pos or negative?
+  glm::dvec3 posi = r.getDirection();
+  
   double highest;
   double u;
   double v;
-  if (posi.x > posi.y)
+  if (glm::abs(posi.x) > glm::abs(posi.y))
   {
     highest = posi.x;
     u = posi.y;
-    v = posi.z;
-    //textMap.setXposMap(textMap);
+    v = -posi.z;
+    if(posi.x < 0)
+    {
+      u = posi.y;
+      v = posi.z;
+    }
   }
   else
   {
     highest = posi.y;
-    u = posi.x;
-    v = posi.z;
+    u = -posi.z;
+    v = posi.x;
+    if(posi.y < 0)
+    {
+      u = posi.z;
+      v = posi.x;
+    }
   }
 
-  if (highest > posi.z)
+  if (highest < glm::abs(posi.z))
   {
     highest = posi.z;
-    u = posi.x;
-    v = posi.y;
+    u = posi.y;
+    v = posi.x;
+    if (posi.z < 0)
+    {
+      u = posi.y;
+      v = -posi.x;
+    }
   }
   double UNorm = u/highest;
   double VNorm = v/highest;
@@ -44,14 +57,9 @@ glm::dvec3 CubeMap::getColor(ray r) const {
 
 int x = UNorm*u;
 int y = VNorm*v;
-
-int index = (y*textMap.getWidth()+x)*3;
-
-glm::dvec3 colors = textMap.getPixelAt(x, y);
-//glm::dvec2 coords = material.getMappedValue(x, y);?? 
-
-// can't tell if I'd just return "colors" here tbh
-  return glm::dvec3();
+const glm::dvec2 coordinates = glm::dvec2(x, y);
+glm::dvec3 colors = getMappedValue(coordinates);
+return colors;
 }
 
 CubeMap::CubeMap() {}

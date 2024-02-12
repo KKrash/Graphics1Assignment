@@ -105,21 +105,19 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
   {
     // barycentrically interpolate UV Coordinates the 3 vertices of the face
     glm::dvec3 Q = r.at(i.getT());
-    double alpha = Q[0];
-    double beta = Q[1];
-    double gamma = Q[2];
+    // double alpha = Q[0];
+    // double beta = Q[1];
+    // double gamma = Q[2];
 
-    double A = normal[0];
-    double B = normal[1];
-    double C = normal[2];
+    // double A = normal[0];
+    // double B = normal[1];
+    // double C = normal[2];
 
-    double u = A-C;
-    double v = B-C;
-    double t = C;
-
-
-    
-    // i.setUVCoordinates();
+    // double u = A-C;
+    // double v = B-C;
+    // double t = C;
+      
+    i.setUVCoordinates(parent->normals[0]);
   }
   else if(VColors.size() != 0)
   {
@@ -133,6 +131,7 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
   Material *m = &inter;
   parent->setMaterial(m);
   return false;
+  VColors.
 }
 
 // Once all the verts and faces are loaded, per vertex normals can be
