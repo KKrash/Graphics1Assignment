@@ -1,0 +1,199 @@
+[
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/RayTracer.cpp.o -c /u/sashankm/Graphics1Assignment/ray/RayTracer.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/RayTracer.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/main.cpp.o -c /u/sashankm/Graphics1Assignment/ray/main.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/main.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/fileio/bitmap.cpp.o -c /u/sashankm/Graphics1Assignment/ray/fileio/bitmap.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/fileio/bitmap.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/fileio/buffer.cpp.o -c /u/sashankm/Graphics1Assignment/ray/fileio/buffer.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/fileio/buffer.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/fileio/images.cc.o -c /u/sashankm/Graphics1Assignment/ray/fileio/images.cc",
+  "file": "/u/sashankm/Graphics1Assignment/ray/fileio/images.cc"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/fileio/pngimage.cpp.o -c /u/sashankm/Graphics1Assignment/ray/fileio/pngimage.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/fileio/pngimage.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/parser/JsonParser.cpp.o -c /u/sashankm/Graphics1Assignment/ray/parser/JsonParser.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/parser/JsonParser.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/parser/Parser.cpp.o -c /u/sashankm/Graphics1Assignment/ray/parser/Parser.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/parser/Parser.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/parser/ParserException.cpp.o -c /u/sashankm/Graphics1Assignment/ray/parser/ParserException.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/parser/ParserException.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/parser/Token.cpp.o -c /u/sashankm/Graphics1Assignment/ray/parser/Token.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/parser/Token.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/parser/Tokenizer.cpp.o -c /u/sashankm/Graphics1Assignment/ray/parser/Tokenizer.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/parser/Tokenizer.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/scene/bbox.cc.o -c /u/sashankm/Graphics1Assignment/ray/scene/bbox.cc",
+  "file": "/u/sashankm/Graphics1Assignment/ray/scene/bbox.cc"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/scene/camera.cpp.o -c /u/sashankm/Graphics1Assignment/ray/scene/camera.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/scene/camera.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/scene/cubeMap.cpp.o -c /u/sashankm/Graphics1Assignment/ray/scene/cubeMap.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/scene/cubeMap.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/scene/light.cpp.o -c /u/sashankm/Graphics1Assignment/ray/scene/light.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/scene/light.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/scene/material.cpp.o -c /u/sashankm/Graphics1Assignment/ray/scene/material.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/scene/material.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/scene/ray.cpp.o -c /u/sashankm/Graphics1Assignment/ray/scene/ray.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/scene/ray.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/scene/scene.cpp.o -c /u/sashankm/Graphics1Assignment/ray/scene/scene.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/scene/scene.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/SceneObjects/Box.cpp.o -c /u/sashankm/Graphics1Assignment/ray/SceneObjects/Box.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/SceneObjects/Box.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o -c /u/sashankm/Graphics1Assignment/ray/SceneObjects/Cone.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cone.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o -c /u/sashankm/Graphics1Assignment/ray/SceneObjects/Cylinder.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cylinder.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o -c /u/sashankm/Graphics1Assignment/ray/SceneObjects/Sphere.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/SceneObjects/Sphere.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/SceneObjects/Square.cpp.o -c /u/sashankm/Graphics1Assignment/ray/SceneObjects/Square.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/SceneObjects/Square.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o -c /u/sashankm/Graphics1Assignment/ray/SceneObjects/trimesh.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/SceneObjects/trimesh.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o -c /u/sashankm/Graphics1Assignment/ray/ui/CommandLineUI.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/ui/CommandLineUI.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o -c /u/sashankm/Graphics1Assignment/ray/ui/CubeMapChooser.cxx",
+  "file": "/u/sashankm/Graphics1Assignment/ray/ui/CubeMapChooser.cxx"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o -c /u/sashankm/Graphics1Assignment/ray/ui/GraphicalUI.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/ui/GraphicalUI.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o -c /u/sashankm/Graphics1Assignment/ray/ui/ModelerCamera.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/ui/ModelerCamera.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o -c /u/sashankm/Graphics1Assignment/ray/ui/TraceGLWindow.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/ui/TraceGLWindow.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/ui/TraceUI.cc.o -c /u/sashankm/Graphics1Assignment/ray/ui/TraceUI.cc",
+  "file": "/u/sashankm/Graphics1Assignment/ray/ui/TraceUI.cc"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/ui/debuggingView.cpp.o -c /u/sashankm/Graphics1Assignment/ray/ui/debuggingView.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/ui/debuggingView.cpp"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o -c /u/sashankm/Graphics1Assignment/ray/ui/debuggingWindow.cxx",
+  "file": "/u/sashankm/Graphics1Assignment/ray/ui/debuggingWindow.cxx"
+},
+
+{
+  "directory": "/u/sashankm/Graphics1Assignment/build",
+  "command": "/lusr/bin/clang++-7   -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs   -Wall -Wextra -Wno-unknown-pragmas -g   -std=gnu++17 -o CMakeFiles/ray.dir/ui/glObjects.cpp.o -c /u/sashankm/Graphics1Assignment/ray/ui/glObjects.cpp",
+  "file": "/u/sashankm/Graphics1Assignment/ray/ui/glObjects.cpp"
+}
+]
