@@ -2,5 +2,6 @@
     "files.associations": {
         "*.ipp": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/ray"
 }

@@ -1,0 +1,3 @@
+/u/sashankm/Graphics1Assignment/build/CMakeFiles/rebuild_cache.dir
+/u/sashankm/Graphics1Assignment/build/CMakeFiles/edit_cache.dir
+/u/sashankm/Graphics1Assignment/build/CMakeFiles/ray.dir
