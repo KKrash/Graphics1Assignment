@@ -10,9 +10,10 @@ glm::dvec3 CubeMap::getColor(ray r) const {
 
   // look at each value and figure out which one is the largest out of the three
   // and then set the u and v coordinates accordingly
-  /*
+  
   glm::dvec3 posi = r.getDirection();
-  CubeMap tm;
+  
+  int whichMap = 0;
   double highest;
   double u;
   double v;
@@ -21,12 +22,11 @@ glm::dvec3 CubeMap::getColor(ray r) const {
     highest = posi.x;
     u = posi.y;
     v = -posi.z;
-    tm.setXposMap();
     if(posi.x < 0)
     {
       u = posi.y;
       v = posi.z;
-      tm.setXnegMap();
+      whichMap = 1;
     }
   }
   else
@@ -34,12 +34,12 @@ glm::dvec3 CubeMap::getColor(ray r) const {
     highest = posi.y;
     u = -posi.z;
     v = posi.x;
-    tm.setYposMap();
+    whichMap = 2;
     if(posi.y < 0)
     {
       u = posi.z;
       v = posi.x;
-      tm.setYnegMap();
+      whichMap = 3;
     }
   }
 
@@ -48,21 +48,21 @@ glm::dvec3 CubeMap::getColor(ray r) const {
     highest = posi.z;
     u = posi.y;
     v = posi.x;
-    tm.setZposMap();
+   whichMap = 4;
     if (posi.z < 0)
     {
       u = posi.y;
       v = -posi.x;
-      tm.setZnegMap();
+      whichMap = 5;     
     }
   }
-  double UNorm = ((u/highest) + 1)/2;
-  double VNorm = ((v/highest) + 1)/2;
-
+  double UNorm = ((u/glm::abs(highest)) + 1) / 2; 
+  double VNorm = ((v/glm::abs(highest)) + 1) / 2; 
+  
+// get the mapped values and stuff
 const glm::dvec2 coordinates = glm::dvec2(UNorm, VNorm);
-glm::dvec3 colors = tm.getMappedValue(coordinates);
-*/
-return r.getDirection();
+glm::dvec3 colors = tMap[whichMap]->getMappedValue(coordinates);
+return colors;
 }
 
 CubeMap::CubeMap() {}

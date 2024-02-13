@@ -67,8 +67,8 @@ glm::dvec3 TextureMap::getMappedValue(const glm::dvec2 &coord) const {
   // and use these to perform bilinear interpolation
   // of the values.
 
-  int x_value = coord[0]*width;
-  int y_value = coord[1]*height;
+  int x_value = std::floor(coord[0]*width);
+  int y_value = std::floor(coord[1]*height);
 
   glm::dvec3 pixelColorMain = getPixelAt(x_value, y_value);
 
@@ -82,6 +82,7 @@ glm::dvec3 TextureMap::getMappedValue(const glm::dvec2 &coord) const {
   glm::dvec3 pixelBeneath;
   glm::dvec3 pixelRight;
   glm::dvec3 pixelDiag;
+
   // worst case, bottom right corner
   if (x_value == width && y_value == height)
   {
@@ -109,13 +110,36 @@ glm::dvec3 TextureMap::getMappedValue(const glm::dvec2 &coord) const {
     }
   }
 
-  double red = (pixelColorMain[0] + pixelBeneath[0] + pixelDiag[0] + pixelRight[0]) / 4.0;
-  double green = (pixelColorMain[1] + pixelBeneath[1] + pixelDiag[1] + pixelRight[1]) / 4.0;
-  double blue = (pixelColorMain[2] + pixelBeneath[2] + pixelDiag[2] + pixelRight[2]) / 4.0;
-
-  glm::dvec3 bilinearValues = glm::dvec3(red, green, blue);
+  glm::dvec3 bilinearValues = interpolationOfColors(pixelColorMain, pixelBeneath, pixelRight, pixelDiag, coord);
 
   return bilinearValues;
+}
+
+glm::dvec3 TextureMap::interpolationOfColors(glm::dvec3 main, glm::dvec3 below, glm::dvec3 right, glm::dvec3 diagonal, const glm::dvec2 &coord) const
+{
+    // with the bottom and diagonal
+  double red1 = (below[0]*((diagonal.x - coord[0])/(diagonal.x - below.x))) + (diagonal[0]*((coord[0] - below.x)/(diagonal.x - below.x)));
+  double green1 = (below[1]*((diagonal.x - coord[0])/(diagonal.x - below.x))) + (diagonal[1]*((coord[0] - below.x)/(diagonal.x - below.x)));
+  double blue1 = (below[2]*((diagonal.x - coord[0])/(diagonal.x - below.x))) + (diagonal[2]*((coord[0] - below.x)/(diagonal.x - below.x)));
+
+  glm::dvec3 inter1 = glm::dvec3(red1, green1, blue1);
+
+  // with the main and the right pixel
+  double red2 = (main[0]*((right.x - coord[0])/(right.x - main.x))) + (right[0]*((coord[0] - main.x)/(right.x - main.x)));
+  double green2 = (main[1]*((right.x - coord[0])/(right.x - main.x))) + (right[1]*((coord[0] - main.x)/(right.x - main.x)));
+  double blue2 = (main[2]*((right.x - coord[0])/(right.x - main.x))) + (right[2]*((coord[0] - main.x)/(right.x - main.x)));
+
+  glm::dvec3 inter2 = glm::dvec3(red2, green2, blue2);
+
+  // putting the two inters together
+  
+  double red3 = (inter1[0]*((inter2.y-coord[1])/(inter2.y-inter1.y))) + (inter2[0]*((coord[1]-inter1.y)/(inter2.y-inter1.y)));
+  double green3 = (inter1[1]*((inter2.y-coord[1])/(inter2.y-inter1.y))) + (inter2[1]*((coord[1]-inter1.y)/(inter2.y-inter1.y)));
+  double blue3 = (inter1[2]*((inter2.y-coord[1])/(inter2.y-inter1.y))) + (inter2[2]*((coord[1]-inter1.y)/(inter2.y-inter1.y)));
+
+  glm::dvec3 finalInterpolation = glm::dvec3(red3, green3, blue3);
+  return finalInterpolation;
+
 }
 
 glm::dvec3 TextureMap::getPixelAt(int x, int y) const {

@@ -38,6 +38,7 @@ public:
   // in the bitmap. Should be called from getMappedValue in order to do
   // bilinear interpolation.
   glm::dvec3 getPixelAt(int x, int y) const;
+  glm::dvec3 interpolationOfColors(glm::dvec3 main, glm::dvec3 below, glm::dvec3 right, glm::dvec3 diagonal, const glm::dvec2 &coord) const;
 
   int getWidth() const { return width; }
   int getHeight() const { return height; }
