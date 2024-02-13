@@ -99,37 +99,7 @@ glm::dvec3 TextureMap::getMappedValue(const glm::dvec2 &coord) const {
   double r2 = (y - y_value) / (y_value2 - y_value);
 
   glm::dvec3 P = (R1*r1) + (R2*r2);
-
-  //double xcoord = (x_value2 < x_value) ? (x_value - x_value2) : (x_value2 - x_value);
-
-  // double red1 = (pixelBeneath[0]*((x_value2 - coord[0])/(xcoord))) + (pixelDiag[0]*((coord[0] - x_value)/(xcoord)));
-  // double green1 = (pixelBeneath[1]*((x_value2- coord[0])/(xcoord))) + (pixelDiag[1]*((coord[0] - x_value)/(xcoord)));
-  // double blue1 = (pixelBeneath[2]*((x_value2 - coord[0])/(xcoord))) + (pixelDiag[2]*((coord[0] - x_value)/(xcoord)));
-
-  // glm::dvec3 inter1 = glm::dvec3(red1, green1, blue1);
-
-  // // with the main and the right pixel
-  // double red2 = (pixelColorMain[0]*((x_value2 - coord[0])/(xcoord))) + (pixelRight[0]*((coord[0] - x_value)/(xcoord)));
-  // double green2 = (pixelColorMain[1]*((x_value2 - coord[0])/(xcoord))) + (pixelRight[1]*((coord[0] - x_value)/(xcoord)));
-  // double blue2 = (pixelColorMain[2]*((x_value2 - coord[0])/(xcoord))) + (pixelRight[2]*((coord[0] - x_value)/(xcoord)));
-
-  //glm::dvec3 inter2 = glm::dvec3(red2, green2, blue2);
-
-  // // putting the two inters together
-  // double ycoord = (y_value2 < y_value) ? (y_value - y_value2) : (y_value2 - y_value);
-
-  // double red3 = (inter1[0]*((y_value2-coord[1])/(ycoord))) + (inter2[0]*((coord[1]-y_value)/(ycoord)));
-  // double green3 = (inter1[1]*((y_value2-coord[1])/(ycoord))) + (inter2[1]*((coord[1]-y_value)/(ycoord)));
-  // double blue3 = (inter1[2]*((y_value2-coord[1])/(ycoord))) + (inter2[2]*((coord[1]-y_value)/(ycoord)));
-
-  // glm::dvec3 bilinearValues = glm::dvec3(red3, green3, blue3);
-  // bilinearValues[0] = bilinearValues[0] < 0 ? 0 : bilinearValues[0];
-  // bilinearValues[1] = bilinearValues[1] < 0 ? 0 : bilinearValues[1];
-  // bilinearValues[2]= bilinearValues[2] < 0 ? 0 : bilinearValues[2];
-  //cout<< "Red: " << bilinearValues[0] << "\t Green: " << bilinearValues[1] << "\t Blue: " << bilinearValues[2] << "\n";
   return P;
-
-  //return getPixelAt(x_value, y_value);
 }
 
 

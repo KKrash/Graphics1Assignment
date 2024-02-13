@@ -114,10 +114,7 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
   glm::dvec3 b_coords = parent->vertices[ids[1]];
   glm::dvec3 c_coords = parent->vertices[ids[2]];
   
-
-  
   bool intersection = true;
-  
   
   if (!((glm::dot(glm::cross(b_coords-a_coords, Q-a_coords), normal) > -RAY_EPSILON) 
   && (glm::dot(glm::cross(c_coords-b_coords, Q-b_coords), normal) > -RAY_EPSILON) 
@@ -147,7 +144,7 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
     i.setN(normal);
   }
   
-  
+
   if(UVCoor.size() != 0)
   {
     // barycentrically interpolate UV Coordinates the 3 vertices of the face
