@@ -127,6 +127,10 @@
 				"role" : "flags"
 			},
 			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libGL.so",
+				"role" : "libraries"
+			},
+			{
 				"backtrace" : 2,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libfltk_images.so",
 				"role" : "libraries"

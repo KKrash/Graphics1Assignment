@@ -100,59 +100,61 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
   // NOTE: THE DISTANCE AND NORMALIZATION OF THE A, B, C, ARE DONE ALREADY-
   //        UNDER VARIABLE "NORMAL"  
   Trimesh::UVCoords UVCoor = parent->uvCoords;
-  Trimesh::VertColors VColors = parent->vertColors;
+      Trimesh::VertColors VColors = parent->vertColors;
 
-  // Compute the face normal here, not on the fly
+      // Compute the face normal here, not on the fly
   double t = -(glm::dot(normal, r.getPosition())-dist)/glm::dot(normal, r.getDirection());
-  i.setT(t);
+  
   if (t < RAY_EPSILON) {
     return false;
   }
+  i.setT(t);
   glm::dvec3 Q = r.getPosition() + t*r.getDirection();
   glm::dvec3 a_coords = parent->vertices[ids[0]];
   glm::dvec3 b_coords = parent->vertices[ids[1]];
   glm::dvec3 c_coords = parent->vertices[ids[2]];
-  glm::dvec3 temp[3] = {glm::cross(b_coords-a_coords, Q-a_coords),
-  glm::cross(c_coords-b_coords, Q-b_coords),
-  glm::cross(a_coords-c_coords, Q-c_coords)};
+  
+
   
   bool intersection = true;
   
-  for (glm::dvec3 cross : temp) {
-    if (!(glm::dot(cross, normal) > RAY_EPSILON)) {
-      intersection = false;
+  
+  if (!((glm::dot(glm::cross(b_coords-a_coords, Q-a_coords), normal) > -RAY_EPSILON) 
+  && (glm::dot(glm::cross(c_coords-b_coords, Q-b_coords), normal) > -RAY_EPSILON) 
+  && (glm::dot(glm::cross(a_coords-c_coords, Q-c_coords), normal) > -RAY_EPSILON))) {
+      return false;
     }
-  }
-  if (!intersection) {
-    return false;
-  }
-  double areas[3] = {0.0, 0.0, 0.0};
-  double total_area = 0.0;
-  for (int i = 0; i < 3; i++) {
-    areas[i] = glm::sqrt(glm::dot(temp[i], temp[i]))/2.0;
-    total_area += areas[i];
-  }
 
-  for (int i = 0; i < 3; i++) {
-    areas[i] /= total_area;
-  }
-  double alpha = areas[0];
-  double beta = areas[1];
-  double gamma = areas[2];
-  if (parent->normals.size() == 0) {
-    i.setN(normal);
+  double a1 = glm::length(glm::cross(c_coords-b_coords, Q-b_coords))/2.0;
+  double a2 = glm::length(glm::cross(a_coords-c_coords, Q-c_coords))/2.0;
+  double a3 = glm::length(glm::cross(b_coords-a_coords, Q-a_coords))/2.0;
+
+  double total_area = a1+a2+a3;
+
+  double alpha = a1/total_area;
+  double beta = a2/total_area;
+  double gamma = a3/total_area;
+
+  assert(alpha+beta+gamma > 1 - RAY_EPSILON && alpha+beta+gamma < 1 + RAY_EPSILON);
+  i.setBary(glm::dvec3(alpha, beta, gamma));
+  i.setObject(parent);
+  if (!parent->normals.empty()) {
+
+    i.setN(glm::normalize(alpha*parent->normals[ids[0]]+
+    beta*parent->normals[ids[1]]+
+    gamma*parent->normals[ids[2]]));
   } else {
-    glm::dvec3 N = alpha*parent->normals[ids[0]]+beta*parent->normals[ids[1]]+gamma*parent->normals[ids[2]];
-    i.setN(N);
+    i.setN(normal);
   }
-
+  
+  
   if(UVCoor.size() != 0)
   {
     // barycentrically interpolate UV Coordinates the 3 vertices of the face
-
-    glm::dvec2 UV = alpha*UVCoor[ids[0]]+beta*UVCoor[ids[1]]+gamma*UVCoor[ids[2]];
+    glm::dvec2 UV = alpha*UVCoor[ids[0]]+
+    beta*UVCoor[ids[1]]+
+    gamma*UVCoor[ids[2]];
     i.setUVCoordinates(UV);
-    return true;
   }
   else if(VColors.size() != 0)
   {
@@ -164,7 +166,6 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
     Material m =  i.getMaterial();
     m.setDiffuse(kd);
     i.setMaterial(m);
-    return true;
   } else {
     i.setMaterial(parent->getMaterial());
   }

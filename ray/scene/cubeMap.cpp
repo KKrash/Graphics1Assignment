@@ -10,7 +10,7 @@ glm::dvec3 CubeMap::getColor(ray r) const {
 
   // look at each value and figure out which one is the largest out of the three
   // and then set the u and v coordinates accordingly
-
+  /*
   glm::dvec3 posi = r.getDirection();
   CubeMap tm;
   double highest;
@@ -61,7 +61,8 @@ glm::dvec3 CubeMap::getColor(ray r) const {
 
 const glm::dvec2 coordinates = glm::dvec2(UNorm, VNorm);
 glm::dvec3 colors = tm.getMappedValue(coordinates);
-return colors;
+*/
+return r.getDirection();
 }
 
 CubeMap::CubeMap() {}

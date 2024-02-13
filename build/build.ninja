@@ -67,8 +67,6 @@ build CMakeFiles/ray.dir/RayTracer.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/main.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/main.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/main.cpp.o.d
@@ -76,8 +74,6 @@ build CMakeFiles/ray.dir/main.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assi
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/fileio/bitmap.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/fileio/bitmap.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/fileio/bitmap.cpp.o.d
@@ -85,8 +81,6 @@ build CMakeFiles/ray.dir/fileio/bitmap.cpp.o: CXX_COMPILER__ray /u/sashankm/Grap
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/fileio
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/fileio/buffer.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/fileio/buffer.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/fileio/buffer.cpp.o.d
@@ -94,8 +88,6 @@ build CMakeFiles/ray.dir/fileio/buffer.cpp.o: CXX_COMPILER__ray /u/sashankm/Grap
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/fileio
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/fileio/images.cc.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/fileio/images.cc || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/fileio/images.cc.o.d
@@ -103,8 +95,6 @@ build CMakeFiles/ray.dir/fileio/images.cc.o: CXX_COMPILER__ray /u/sashankm/Graph
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/fileio
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/fileio/pngimage.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/fileio/pngimage.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/fileio/pngimage.cpp.o.d
@@ -112,8 +102,6 @@ build CMakeFiles/ray.dir/fileio/pngimage.cpp.o: CXX_COMPILER__ray /u/sashankm/Gr
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/fileio
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/parser/JsonParser.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/parser/JsonParser.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/parser/JsonParser.cpp.o.d
@@ -121,8 +109,6 @@ build CMakeFiles/ray.dir/parser/JsonParser.cpp.o: CXX_COMPILER__ray /u/sashankm/
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/parser
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/parser/Parser.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/parser/Parser.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/parser/Parser.cpp.o.d
@@ -130,8 +116,6 @@ build CMakeFiles/ray.dir/parser/Parser.cpp.o: CXX_COMPILER__ray /u/sashankm/Grap
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/parser
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/parser/ParserException.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/parser/ParserException.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/parser/ParserException.cpp.o.d
@@ -139,8 +123,6 @@ build CMakeFiles/ray.dir/parser/ParserException.cpp.o: CXX_COMPILER__ray /u/sash
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/parser
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/parser/Token.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/parser/Token.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/parser/Token.cpp.o.d
@@ -148,8 +130,6 @@ build CMakeFiles/ray.dir/parser/Token.cpp.o: CXX_COMPILER__ray /u/sashankm/Graph
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/parser
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/parser/Tokenizer.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/parser/Tokenizer.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/parser/Tokenizer.cpp.o.d
@@ -157,8 +137,6 @@ build CMakeFiles/ray.dir/parser/Tokenizer.cpp.o: CXX_COMPILER__ray /u/sashankm/G
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/parser
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/scene/bbox.cc.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/scene/bbox.cc || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/scene/bbox.cc.o.d
@@ -166,8 +144,6 @@ build CMakeFiles/ray.dir/scene/bbox.cc.o: CXX_COMPILER__ray /u/sashankm/Graphics
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/scene
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/scene/camera.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/scene/camera.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/scene/camera.cpp.o.d
@@ -175,8 +151,6 @@ build CMakeFiles/ray.dir/scene/camera.cpp.o: CXX_COMPILER__ray /u/sashankm/Graph
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/scene
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/scene/cubeMap.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/scene/cubeMap.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/scene/cubeMap.cpp.o.d
@@ -184,8 +158,6 @@ build CMakeFiles/ray.dir/scene/cubeMap.cpp.o: CXX_COMPILER__ray /u/sashankm/Grap
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/scene
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/scene/light.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/scene/light.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/scene/light.cpp.o.d
@@ -193,8 +165,6 @@ build CMakeFiles/ray.dir/scene/light.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphi
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/scene
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/scene/material.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/scene/material.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/scene/material.cpp.o.d
@@ -202,8 +172,6 @@ build CMakeFiles/ray.dir/scene/material.cpp.o: CXX_COMPILER__ray /u/sashankm/Gra
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/scene
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/scene/ray.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/scene/ray.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/scene/ray.cpp.o.d
@@ -211,8 +179,6 @@ build CMakeFiles/ray.dir/scene/ray.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/scene
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/scene/scene.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/scene/scene.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/scene/scene.cpp.o.d
@@ -220,8 +186,6 @@ build CMakeFiles/ray.dir/scene/scene.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphi
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/scene
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/SceneObjects/Box.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/SceneObjects/Box.cpp.o.d
@@ -229,8 +193,6 @@ build CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: CXX_COMPILER__ray /u/sashankm/G
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/SceneObjects
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/SceneObjects/Cone.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o.d
@@ -238,8 +200,6 @@ build CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: CXX_COMPILER__ray /u/sashankm/
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/SceneObjects
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/SceneObjects/Cylinder.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o.d
@@ -247,8 +207,6 @@ build CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: CXX_COMPILER__ray /u/sasha
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/SceneObjects
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/SceneObjects/Sphere.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o.d
@@ -256,8 +214,6 @@ build CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: CXX_COMPILER__ray /u/sashank
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/SceneObjects
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/SceneObjects/Square.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/SceneObjects/Square.cpp.o.d
@@ -265,8 +221,6 @@ build CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: CXX_COMPILER__ray /u/sashank
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/SceneObjects
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/SceneObjects/trimesh.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o.d
@@ -274,8 +228,6 @@ build CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: CXX_COMPILER__ray /u/sashan
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/SceneObjects
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/ui/CommandLineUI.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o.d
@@ -283,8 +235,6 @@ build CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o: CXX_COMPILER__ray /u/sashankm/G
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/ui
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/ui/CubeMapChooser.cxx || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o.d
@@ -292,8 +242,6 @@ build CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o: CXX_COMPILER__ray /u/sashankm/
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/ui
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/ui/GraphicalUI.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o.d
@@ -301,8 +249,6 @@ build CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o: CXX_COMPILER__ray /u/sashankm/Gra
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/ui
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/ui/ModelerCamera.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o.d
@@ -310,8 +256,6 @@ build CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o: CXX_COMPILER__ray /u/sashankm/G
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/ui
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/ui/TraceGLWindow.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o.d
@@ -319,8 +263,6 @@ build CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o: CXX_COMPILER__ray /u/sashankm/G
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/ui
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/ui/TraceUI.cc.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/ui/TraceUI.cc || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/ui/TraceUI.cc.o.d
@@ -328,8 +270,6 @@ build CMakeFiles/ray.dir/ui/TraceUI.cc.o: CXX_COMPILER__ray /u/sashankm/Graphics
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/ui
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/ui/debuggingView.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/ui/debuggingView.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/ui/debuggingView.cpp.o.d
@@ -337,8 +277,6 @@ build CMakeFiles/ray.dir/ui/debuggingView.cpp.o: CXX_COMPILER__ray /u/sashankm/G
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/ui
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/ui/debuggingWindow.cxx || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o.d
@@ -346,8 +284,6 @@ build CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o: CXX_COMPILER__ray /u/sashankm
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/ui
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 build CMakeFiles/ray.dir/ui/glObjects.cpp.o: CXX_COMPILER__ray /u/sashankm/Graphics1Assignment/ray/ui/glObjects.cpp || cmake_object_order_depends_target_ray
   DEP_FILE = CMakeFiles/ray.dir/ui/glObjects.cpp.o.d
@@ -355,8 +291,6 @@ build CMakeFiles/ray.dir/ui/glObjects.cpp.o: CXX_COMPILER__ray /u/sashankm/Graph
   INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs
   OBJECT_DIR = CMakeFiles/ray.dir
   OBJECT_FILE_DIR = CMakeFiles/ray.dir/ui
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
-  TARGET_PDB = ray.pdb
 
 
 # =============================================================================
@@ -366,15 +300,14 @@ build CMakeFiles/ray.dir/ui/glObjects.cpp.o: CXX_COMPILER__ray /u/sashankm/Graph
 #############################################
 # Link the executable ray
 
-build ray: CXX_EXECUTABLE_LINKER__ray CMakeFiles/ray.dir/RayTracer.cpp.o CMakeFiles/ray.dir/main.cpp.o CMakeFiles/ray.dir/fileio/bitmap.cpp.o CMakeFiles/ray.dir/fileio/buffer.cpp.o CMakeFiles/ray.dir/fileio/images.cc.o CMakeFiles/ray.dir/fileio/pngimage.cpp.o CMakeFiles/ray.dir/parser/JsonParser.cpp.o CMakeFiles/ray.dir/parser/Parser.cpp.o CMakeFiles/ray.dir/parser/ParserException.cpp.o CMakeFiles/ray.dir/parser/Token.cpp.o CMakeFiles/ray.dir/parser/Tokenizer.cpp.o CMakeFiles/ray.dir/scene/bbox.cc.o CMakeFiles/ray.dir/scene/camera.cpp.o CMakeFiles/ray.dir/scene/cubeMap.cpp.o CMakeFiles/ray.dir/scene/light.cpp.o CMakeFiles/ray.dir/scene/material.cpp.o CMakeFiles/ray.dir/scene/ray.cpp.o CMakeFiles/ray.dir/scene/scene.cpp.o CMakeFiles/ray.dir/SceneObjects/Box.cpp.o CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o CMakeFiles/ray.dir/SceneObjects/Square.cpp.o CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o CMakeFiles/ray.dir/ui/TraceUI.cc.o CMakeFiles/ray.dir/ui/debuggingView.cpp.o CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o CMakeFiles/ray.dir/ui/glObjects.cpp.o | /usr/lib/x86_64-linux-gnu/libfltk_images.so /usr/lib/x86_64-linux-gnu/libfltk_forms.so /usr/lib/x86_64-linux-gnu/libfltk_gl.so /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libfltk.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libGLU.so
+build ray: CXX_EXECUTABLE_LINKER__ray CMakeFiles/ray.dir/RayTracer.cpp.o CMakeFiles/ray.dir/main.cpp.o CMakeFiles/ray.dir/fileio/bitmap.cpp.o CMakeFiles/ray.dir/fileio/buffer.cpp.o CMakeFiles/ray.dir/fileio/images.cc.o CMakeFiles/ray.dir/fileio/pngimage.cpp.o CMakeFiles/ray.dir/parser/JsonParser.cpp.o CMakeFiles/ray.dir/parser/Parser.cpp.o CMakeFiles/ray.dir/parser/ParserException.cpp.o CMakeFiles/ray.dir/parser/Token.cpp.o CMakeFiles/ray.dir/parser/Tokenizer.cpp.o CMakeFiles/ray.dir/scene/bbox.cc.o CMakeFiles/ray.dir/scene/camera.cpp.o CMakeFiles/ray.dir/scene/cubeMap.cpp.o CMakeFiles/ray.dir/scene/light.cpp.o CMakeFiles/ray.dir/scene/material.cpp.o CMakeFiles/ray.dir/scene/ray.cpp.o CMakeFiles/ray.dir/scene/scene.cpp.o CMakeFiles/ray.dir/SceneObjects/Box.cpp.o CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o CMakeFiles/ray.dir/SceneObjects/Square.cpp.o CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o CMakeFiles/ray.dir/ui/TraceUI.cc.o CMakeFiles/ray.dir/ui/debuggingView.cpp.o CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o CMakeFiles/ray.dir/ui/glObjects.cpp.o | /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libfltk_images.so /usr/lib/x86_64-linux-gnu/libfltk_forms.so /usr/lib/x86_64-linux-gnu/libfltk_gl.so /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libfltk.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libGLU.so
   FLAGS = -Wall -Wextra -Wno-unknown-pragmas -g
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libfltk_images.so  /usr/lib/x86_64-linux-gnu/libfltk_forms.so  /usr/lib/x86_64-linux-gnu/libfltk_gl.so  /usr/lib/x86_64-linux-gnu/libGL.so  /usr/lib/x86_64-linux-gnu/libfltk.so  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  -lm  /usr/lib/x86_64-linux-gnu/libpng.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libGLU.so
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libGL.so  /usr/lib/x86_64-linux-gnu/libfltk_images.so  /usr/lib/x86_64-linux-gnu/libfltk_forms.so  /usr/lib/x86_64-linux-gnu/libfltk_gl.so  /usr/lib/x86_64-linux-gnu/libGL.so  /usr/lib/x86_64-linux-gnu/libfltk.so  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  -lm  /usr/lib/x86_64-linux-gnu/libpng.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libGLU.so
   OBJECT_DIR = CMakeFiles/ray.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/ray.dir/
   TARGET_FILE = ray
-  TARGET_PDB = ray.pdb
+  TARGET_PDB = ray.dbg
 
 # =============================================================================
 # Target aliases.
@@ -401,14 +334,14 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /u/sashankm/Graphics1Assignment/ray/CMakeLists.txt /usr/lib/fltk/FLTK-Targets-none.cmake /usr/lib/fltk/FLTK-Targets.cmake /usr/lib/fltk/FLTKConfig.cmake /usr/share/cmake-3.16/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.16/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.16/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.16/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.16/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.16/Modules/CheckFunctionExists.c /usr/share/cmake-3.16/Modules/CheckFunctionExists.cmake /usr/share/cmake-3.16/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.16/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-C.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-FindBinUtils.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang.cmake /usr/share/cmake-3.16/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/FindFLTK.cmake /usr/share/cmake-3.16/Modules/FindFontconfig.cmake /usr/share/cmake-3.16/Modules/FindFreetype.cmake /usr/share/cmake-3.16/Modules/FindOpenGL.cmake /usr/share/cmake-3.16/Modules/FindPNG.cmake /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.16/Modules/FindPackageMessage.cmake /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake /usr/share/cmake-3.16/Modules/FindX11.cmake /usr/share/cmake-3.16/Modules/FindZLIB.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.16/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /u/sashankm/Graphics1Assignment/ray/CMakeLists.txt /usr/lib/fltk/FLTK-Targets-none.cmake /usr/lib/fltk/FLTK-Targets.cmake /usr/lib/fltk/FLTKConfig.cmake /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/CheckFunctionExists.cmake /usr/share/cmake-3.16/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-C.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/FindFLTK.cmake /usr/share/cmake-3.16/Modules/FindFontconfig.cmake /usr/share/cmake-3.16/Modules/FindFreetype.cmake /usr/share/cmake-3.16/Modules/FindOpenGL.cmake /usr/share/cmake-3.16/Modules/FindPNG.cmake /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.16/Modules/FindPackageMessage.cmake /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake /usr/share/cmake-3.16/Modules/FindX11.cmake /usr/share/cmake-3.16/Modules/FindZLIB.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.16/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /u/sashankm/Graphics1Assignment/ray/CMakeLists.txt /usr/lib/fltk/FLTK-Targets-none.cmake /usr/lib/fltk/FLTK-Targets.cmake /usr/lib/fltk/FLTKConfig.cmake /usr/share/cmake-3.16/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.16/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.16/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.16/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.16/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.16/Modules/CheckFunctionExists.c /usr/share/cmake-3.16/Modules/CheckFunctionExists.cmake /usr/share/cmake-3.16/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.16/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-C.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-FindBinUtils.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang.cmake /usr/share/cmake-3.16/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/FindFLTK.cmake /usr/share/cmake-3.16/Modules/FindFontconfig.cmake /usr/share/cmake-3.16/Modules/FindFreetype.cmake /usr/share/cmake-3.16/Modules/FindOpenGL.cmake /usr/share/cmake-3.16/Modules/FindPNG.cmake /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.16/Modules/FindPackageMessage.cmake /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake /usr/share/cmake-3.16/Modules/FindX11.cmake /usr/share/cmake-3.16/Modules/FindZLIB.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.16/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake: phony
+build /u/sashankm/Graphics1Assignment/ray/CMakeLists.txt /usr/lib/fltk/FLTK-Targets-none.cmake /usr/lib/fltk/FLTK-Targets.cmake /usr/lib/fltk/FLTKConfig.cmake /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/CheckFunctionExists.cmake /usr/share/cmake-3.16/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-C.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/FindFLTK.cmake /usr/share/cmake-3.16/Modules/FindFontconfig.cmake /usr/share/cmake-3.16/Modules/FindFreetype.cmake /usr/share/cmake-3.16/Modules/FindOpenGL.cmake /usr/share/cmake-3.16/Modules/FindPNG.cmake /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.16/Modules/FindPackageMessage.cmake /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake /usr/share/cmake-3.16/Modules/FindX11.cmake /usr/share/cmake-3.16/Modules/FindZLIB.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.16/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake: phony
 
 
 #############################################
