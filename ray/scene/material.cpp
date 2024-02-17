@@ -69,10 +69,13 @@ glm::dvec3 TextureMap::getMappedValue(const glm::dvec2 &coord) const {
 
   double x = coord[0] * width;
   double y = coord[1] * height;
-  int x_value = std::floor(coord[0]*width);
-  int y_value = std::floor(coord[1]*height);
+
+  int x_value = std::floor(x);
+  int y_value = std::floor(y);
+
+  y_value = (y_value >= height) ? y_value-1 : y_value;
   int x_value2 = (x_value < width) ? x_value+1 : x_value;
-  int y_value2 = (y_value < height) ? y_value+1 : y_value;
+  int y_value2 = (y_value < height-1) ? y_value+1 : y_value;
 
   // by default, it's going to be 
   /*
@@ -108,13 +111,16 @@ glm::dvec3 TextureMap::getPixelAt(int x, int y) const {
   //
   // In order to add texture mapping support to the
   // raytracer, you need to implement this function.
-  int index = (y*width+x)*3;
-  double dataR = data[index];
-  double dataG = data[index+1];
-  double dataB = data[index+2];
+  int index = ((y*width)+x)*3;
+
+  //cout<<"Width: " << width << "\t Height: " << height << "\n";
+  //cout << "X: " << x << "\t Y: " << y << "\n\n";
+  double dataR = data.at(index);
+  double dataG = data.at(index+1);
+  double dataB = data.at(index+2);
+
   glm::dvec3 returnColor = glm::dvec3(dataR/255, dataG/255, dataB/255);
 
-  //cout<< "Red: " << returnColor[0] << "\t Green: " << returnColor[1] << "\t Blue: " << returnColor[2] << "\n";
   
   return returnColor;
 }

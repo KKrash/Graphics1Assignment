@@ -59,12 +59,18 @@ glm::dvec3 RayTracer::tracePixel(int i, int j) {
   double x = double(i) / double(buffer_width);
   double y = double(j) / double(buffer_height);
 
+  // int slicedUp = sqrt(samples);
+  // double divvy = 1/slicedUp;
+  // double x_add = -divvy;
+  // double y_add = -divvy;
+  //double starter = (x == 0) ? x : x+1;
   unsigned char *pixel = buffer.data() + (i + j * buffer_width) * 3;
+  
   col = trace(x, y);
 
-  pixel[0] = (int)(255.0 * col[0]);
-  pixel[1] = (int)(255.0 * col[1]);
-  pixel[2] = (int)(255.0 * col[2]);
+  pixel[0] = (int)(255.0 * (col[0]));
+  pixel[1] = (int)(255.0 * (col[1]));
+  pixel[2] = (int)(255.0 * (col[2]));
   return col;
 }
 
@@ -103,8 +109,6 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
     R.setPosition(Q);
     I = I + m.kr(i) * traceRay(R, thresh, depth-1, t);
     
-
-    //double n_r = n_i/n_t;
  // Determining TIR⃗
     double dotty = glm::dot(i.getN(), -r.getDirection());
     if(dotty > 0)
@@ -117,7 +121,6 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
       n_t = 1; // air index
       n_i = m.index(i);
     }
-    //glm::dvec3 refract = (n_r*(dotty)- glm::sqrt(1 - (n_r * n_r) * (1 - (dotty*dotty)))* (i.getN()-(n_r)*r.getDirection()));
     double nSquare = std::pow((n_i/n_t), 2);
     double cosine = std::sqrt(1-nSquare*(1-(std::pow(dotty, 2))));
     if ((m.kt(i)[0] > 0 || m.kt(i)[1] > 0 || m.kt(i)[2] > 0) && cosine > 0)
@@ -130,7 +133,6 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
       }
       else if (dotty < 0) // exitting
       {
-        // cout << "refract";
         T = glm::refract(r.getDirection(), -i.getN(), (n_i/n_t));
       }
       ray R_refract (Q, T, glm::dvec3(0.0), ray::REFRACTION);
@@ -147,12 +149,6 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
     // No intersection. This ray travels to infinity, so we color
     // it according to the background color, which in this (simple)
     // case is just black.
-    //
-    // FIXME: Add CubeMap support here.
-    // TIPS: CubeMap object can be fetched from
-    // traceUI->getCubeMap();
-    //       Check traceUI->cubeMap() to see if cubeMap is loaded
-    //       and enabled.
     bool cubeMapExists = traceUI->cubeMap();
     if (cubeMapExists)
     {
@@ -306,12 +302,34 @@ void RayTracer::traceImage(int w, int h) {
   }
 }
 
-int RayTracer::aaImage() {
+int RayTracer :: aaImage() {
   // YOUR CODE HERE
   // FIXME: Implement Anti-aliasing here
   //
   // TIP: samples and aaThresh have been synchronized with TraceUI by
   //      RayTracer::traceSetup() function
+
+  // int divvy = std::sqrt(samples);
+  // glm::dvec3 pixelate = getPixel(x, y);
+  // double divide = 1/samples;
+  // double x_position = x;
+  // double y_position = y;
+  // glm::dvec3 colors = glm::dvec3(0.0, 0.0, 0.0);
+  // for (int i = 0; i < divvy; i++)
+  // {
+  //   x_position = x;
+  //   for (int j = 0; j < divvy; j++)
+  //   {
+  //     glm::dvec3 total = trace(x_position, y_position);
+  //     colors[0] += (int)(255.0 * total[0]);
+  //     colors[1] += (int)(255.0 * total[1]);
+  //     colors[2] += (int)(255.0 * total[2]);
+  //     x_position += divide;
+  //   }
+  //   y_position += divide;
+  // }
+  // glm::dvec3 averageColors = glm::dvec3(colors[0]/samples, colors[1]/samples, colors[2]/samples);
+  // return averageColors;
   return 0;
 }
 

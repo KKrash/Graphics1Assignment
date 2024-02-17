@@ -14,9 +14,10 @@ glm::dvec3 CubeMap::getColor(ray r) const {
   glm::dvec3 posi = r.getDirection();
   
   int whichMap = 0;
-  double highest;
-  double u;
-  double v;
+  double highest = 0.0;
+  double u = 0.0;
+  double v = 0.0;
+
   if (glm::abs(posi.x) > glm::abs(posi.y))
   {
     highest = posi.x;
