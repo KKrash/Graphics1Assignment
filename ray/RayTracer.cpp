@@ -59,18 +59,46 @@ glm::dvec3 RayTracer::tracePixel(int i, int j) {
   double x = double(i) / double(buffer_width);
   double y = double(j) / double(buffer_height);
 
-  // int slicedUp = sqrt(samples);
-  // double divvy = 1/slicedUp;
-  // double x_add = -divvy;
-  // double y_add = -divvy;
-  //double starter = (x == 0) ? x : x+1;
   unsigned char *pixel = buffer.data() + (i + j * buffer_width) * 3;
-  
-  col = trace(x, y);
 
-  pixel[0] = (int)(255.0 * (col[0]));
-  pixel[1] = (int)(255.0 * (col[1]));
-  pixel[2] = (int)(255.0 * (col[2]));
+  if(traceUI->aaSwitch())
+  {
+    //double x_floor = floor(x);
+    //double y_floor = floor(y);
+    double xDup = x-RAY_EPSILON;
+    double yDup = y-RAY_EPSILON;
+
+    double stride = 1.0/double(samples);
+    double x_stride = stride / double (buffer_width);
+    double y_stride = stride / double (buffer_height);
+
+    for (int ycross = 0; ycross < samples; ycross++)
+    {
+      for (int xcross = 0; xcross < samples; xcross++)
+      {
+        col += trace(xDup, yDup) / double(samples*samples);
+        xDup += x_stride;
+        cout<<"X: " << xDup << "\t Y: " << yDup << "\n";
+      }
+      xDup = x;
+      yDup += y_stride;
+    }
+
+    pixel[0] = (int)(255.0 * (col[0]));
+    pixel[1] = (int)(255.0 * (col[1]));
+    pixel[2] = (int)(255.0 * (col[2]));
+
+  }
+  
+  else
+  {
+    col = trace(x, y);
+
+    pixel[0] = (int)(255.0 * (col[0]));
+    pixel[1] = (int)(255.0 * (col[1]));
+    pixel[2] = (int)(255.0 * (col[2]));
+  }
+
   return col;
 }
 
@@ -84,7 +112,6 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
     return glm::dvec3(0.0, 0.0, 0.0);
   }
   isect i;
-  // glm::dvec3 colorC;
   glm::dvec3 I;
 #if VERBOSE
   std::cerr << "== current depth: " << depth << std::endl;
@@ -291,46 +318,84 @@ void RayTracer::traceImage(int w, int h) {
 
   // YOUR CODE HERE
   // FIXME: Start one or more threads for ray tracing
-
+  glm::dvec3 Trace;
   for (int i = 0; i < h; i++)
   {
     for (int j = 0; j < w; j++)
     {
-      glm::dvec3 Trace = tracePixel(i, j);
+      Trace = tracePixel(i, j);
       setPixel(i, j, Trace);
     }
   }
+  // if (traceUI->aaSwitch())
+  // {
+  //   aaImage(w, h);
+  // }
 }
 
-int RayTracer :: aaImage() {
+void RayTracer :: aaImage(int w, int h) {
   // YOUR CODE HERE
   // FIXME: Implement Anti-aliasing here
   //
   // TIP: samples and aaThresh have been synchronized with TraceUI by
   //      RayTracer::traceSetup() function
 
-  // int divvy = std::sqrt(samples);
-  // glm::dvec3 pixelate = getPixel(x, y);
-  // double divide = 1/samples;
-  // double x_position = x;
-  // double y_position = y;
-  // glm::dvec3 colors = glm::dvec3(0.0, 0.0, 0.0);
-  // for (int i = 0; i < divvy; i++)
-  // {
-  //   x_position = x;
-  //   for (int j = 0; j < divvy; j++)
-  //   {
-  //     glm::dvec3 total = trace(x_position, y_position);
-  //     colors[0] += (int)(255.0 * total[0]);
-  //     colors[1] += (int)(255.0 * total[1]);
-  //     colors[2] += (int)(255.0 * total[2]);
-  //     x_position += divide;
-  //   }
-  //   y_position += divide;
-  // }
-  // glm::dvec3 averageColors = glm::dvec3(colors[0]/samples, colors[1]/samples, colors[2]/samples);
-  // return averageColors;
-  return 0;
+  glm::dvec3 averageColors;
+  for (int i = 0; i < h; i++)
+  {
+    for (int j = 0; j < w; j++)
+    {
+      averageColors = tracePixel(i, j);
+      setPixel(i, j, averageColors);
+    }
+  }
+}
+
+// where I overcomplicate things by making an entirely separate helper function that's almost
+// the exact same as tracePixel but because of one specification I decide that this was a better
+// route
+// right now this is entirely pointless as I moved the calculations to tracePixel, but
+// more of just a testament to my work I guess?
+glm::dvec3 RayTracer :: aaHelper(int i, int j)
+{
+  //cout<<"I'm doing my part! :3 \n";
+  glm::dvec3 col(0, 0, 0);
+
+    if (!sceneLoaded())
+      return col;
+    //cout<<samples<<"\n\n";
+    //int divvy = sqrt(samples);
+    double starting = (1.0/double(samples));
+    double pixelX = double(i) / double(buffer_width);
+    double pixelY = double(j) / double(buffer_height);
+    double tbAddX = starting;
+    double tbAddY = starting;
+
+    unsigned char *pixel = buffer.data() + (i + j * buffer_width) * 3;
+
+    for (int i = 0; i < samples; i++) // y position
+    {
+      for (int j = 0; j < samples; j++) // x position
+      {
+        double x = ((tbAddX/double(buffer_width))+pixelX);
+        double y = ((tbAddY/double(buffer_height))+pixelY);
+        col += trace(x, y);
+        cout<<"X: " << x << " Y: " << y << "\n";
+        cout<<col<<"\n\n";
+        tbAddX += starting;
+      }
+      tbAddX = starting;
+      tbAddY += starting;
+    }
+    col[0] = col[0]/samples;
+    col[1] = col[1]/samples;
+    col[2] = col[2]/samples;
+
+    pixel[0] = (int)(255.0 * ((col[0])));
+    pixel[1] = (int)(255.0 * ((col[1])));
+    pixel[2] = (int)(255.0 * ((col[2])));
+
+    return col;
 }
 
 bool RayTracer::checkRender() {

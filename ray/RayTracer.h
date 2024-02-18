@@ -39,7 +39,8 @@ public:
   double aspectRatio();
 
   void traceImage(int w, int h);
-  int aaImage();
+  void aaImage(int w, int h);
+  glm::dvec3 aaHelper(int i, int j);
   bool checkRender();
   void waitRender();
 
