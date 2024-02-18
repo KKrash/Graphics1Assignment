@@ -74,7 +74,7 @@ glm::dvec3 TextureMap::getMappedValue(const glm::dvec2 &coord) const {
   int y_value = std::floor(y);
 
   y_value = (y_value >= height) ? y_value-1 : y_value;
-  int x_value2 = (x_value < width) ? x_value+1 : x_value;
+  int x_value2 = (x_value < width-1) ? x_value+1 : x_value;
   int y_value2 = (y_value < height-1) ? y_value+1 : y_value;
 
   // by default, it's going to be 

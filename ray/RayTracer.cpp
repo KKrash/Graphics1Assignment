@@ -63,14 +63,14 @@ glm::dvec3 RayTracer::tracePixel(int i, int j) {
 
   if(traceUI->aaSwitch())
   {
-    //double x_floor = floor(x);
-    //double y_floor = floor(y);
-    double xDup = x-RAY_EPSILON;
-    double yDup = y-RAY_EPSILON;
-
     double stride = 1.0/double(samples);
     double x_stride = stride / double (buffer_width);
     double y_stride = stride / double (buffer_height);
+
+    //double xDup = x - (0.5 * (1.0/double(buffer_width)));
+    //double yDup = y - (0.5 * (1.0/double(buffer_height)));
+    double xDup = x;
+    double yDup = y;
 
     for (int ycross = 0; ycross < samples; ycross++)
     {
@@ -78,7 +78,6 @@ glm::dvec3 RayTracer::tracePixel(int i, int j) {
       {
         col += trace(xDup, yDup) / double(samples*samples);
         xDup += x_stride;
-        cout<<"X: " << xDup << "\t Y: " << yDup << "\n";
       }
       xDup = x;
       yDup += y_stride;
@@ -87,9 +86,7 @@ glm::dvec3 RayTracer::tracePixel(int i, int j) {
     pixel[0] = (int)(255.0 * (col[0]));
     pixel[1] = (int)(255.0 * (col[1]));
     pixel[2] = (int)(255.0 * (col[2]));
-
   }
-  
   else
   {
     col = trace(x, y);

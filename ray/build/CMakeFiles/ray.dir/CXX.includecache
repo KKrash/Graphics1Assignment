@@ -484,6 +484,12 @@ iostream
 string
 -
 
+/u/karahp22/Graphics/ray/fileio/images.h
+stdint.h
+-
+vector
+-
+
 /u/karahp22/Graphics/ray/parser/JsonParser.h
 map
 -
@@ -593,6 +599,10 @@ memory
 -
 
 /u/karahp22/Graphics/ray/scene/kdTree.h
+vector
+-
+glm/vec3.hpp
+-
 
 /u/karahp22/Graphics/ray/scene/light.h
 algorithm
@@ -602,6 +612,22 @@ algorithm
 scene.h
 /u/karahp22/Graphics/ray/scene/scene.h
 FL/gl.h
+-
+
+/u/karahp22/Graphics/ray/scene/material.cpp
+material.h
+/u/karahp22/Graphics/ray/scene/material.h
+../ui/TraceUI.h
+/u/karahp22/Graphics/ray/ui/TraceUI.h
+light.h
+/u/karahp22/Graphics/ray/scene/light.h
+ray.h
+/u/karahp22/Graphics/ray/scene/ray.h
+../fileio/images.h
+/u/karahp22/Graphics/ray/fileio/images.h
+glm/gtx/io.hpp
+-
+iostream
 -
 
 /u/karahp22/Graphics/ray/scene/material.h
