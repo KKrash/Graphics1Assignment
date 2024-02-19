@@ -7,6 +7,11 @@ glm::dvec3 splitPlane::getPosition() {
     return position;
 }
 
+double splitPlane::getSpecificPart(int axis)
+{
+    return position[axis];
+}
+
 int splitPlane::getAxis() {
     return axis;
 }
@@ -47,8 +52,6 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
     double minsam = -1;
     splitPlane ret = candidates[0];
     for (splitPlane c : candidates) {
-
-
         for (Geometry* obj : objList) {
             if (obj->getBoundingBox().getMin()[c.getAxis()] < c.getPosition()[c.getAxis()]) {
                 c.left.push_back(obj);
@@ -99,7 +102,6 @@ Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int
     }
     splitPlane sp = findBestSplitPlane(objList, bbox);
     vector<Geometry*> left = sp.left;
-
     vector<Geometry*> right = sp.right;
 
     if (right.empty() || left.empty()) {
@@ -109,5 +111,47 @@ Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int
         Node right_node = buildTree(right, sp.rightbbox, depth, leafSize); 
         return Node(&sp, &left_node, &right_node, vector<Geometry*>());
     }
+}
+
+bool Node::findIntersectionSplit(Node n, double tmin, double tmax)
+{
+    // if ray is nearly parallel to the split plane, calculate as near to parallel as possible
+    // else
+    //{
+        if (tmin >= n.plane->leftbbox.getMin()[n.plane->getAxis()] && tmax <= n.plane->leftbbox.getMax()[n.plane->getAxis()])
+        {
+            if(n.leftNode, tmin, tmax)
+            {
+                return true;
+            }
+        }
+        else if (tmin >= n.plane->rightbbox.getMin()[n.plane->getAxis()] && tmax <= n.plane->rightbbox.getMax()[n.plane->getAxis()])
+        {
+            if(n.rightNode, tmin, tmax)
+            {
+                return true;
+            }
+        }
+        else
+        {
+            // find the nearest interaction, and if that's true return true
+            // find the farthest interaction, and then if this is true return true
+        }
+    //}
+    return false;
+}
+
+void Node::findIntersectionLeaf(ray &r, isect &i, double tmin, double tmax)
+{
+    // peekaboo!
+    isect i_c_u; 
+    for (int j = 0; j < objList.size(); j++)
+    {
+        if (objList.at(j)->intersect(r, i) && i_c_u.getT() >= tmin && i_c_u.getT() <= tmax)
+        {
+            i = i_c_u;
+        }
+    }
+
 }
 
