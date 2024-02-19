@@ -1,18 +1,30 @@
 #include "kdTree.h"
-#include "scene.h"
+
 
 using namespace std;
 
-glm::dvec3 splitPlane::getPostition() {
+glm::dvec3 splitPlane::getPosition() {
     return position;
 }
 
-glm::dvec3 splitPlane::getAxis() {
+int splitPlane::getAxis() {
     return axis;
 }
 
 void splitPlane::setPosition(glm::dvec3 p ){
     position = p;
+}
+
+splitPlane::splitPlane(int a, glm::dvec3 p) {
+    axis = a; 
+    position = p;
+}
+
+Node::Node(splitPlane* p, Node *l, Node *r, std::vector<Geometry*> ol) {
+    plane = p; 
+    leftNode = l;
+    rightNode = r;
+    objList = ol;
 }
 
 splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox){
@@ -26,6 +38,7 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
             sp1.setPosition(temp);
             temp[axis] = obj->getBoundingBox().getMax()[axis];
             sp2.setPosition(temp);
+
             candidates.push_back(sp1);
             candidates.push_back(sp2);
             
@@ -34,44 +47,67 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
     double minsam = -1;
     splitPlane ret = candidates[0];
     for (splitPlane c : candidates) {
-        int leftCount = 0;
-        int rightCount = 0;
-        double leftbbox = 0;
-        double rightbbox = 0;
+
+
         for (Geometry* obj : objList) {
-            if (obj->getBoundingBox().getMax()[c.getAxis()] <= c.getPostition()[c.getAxis()]) {
-                leftCount++;
+            if (obj->getBoundingBox().getMin()[c.getAxis()] < c.getPosition()[c.getAxis()]) {
+                c.left.push_back(obj);
             }
-            if (obj->getBoundingBox().getMin()[c.getAxis()] >= c.getPostition()[c.getAxis()]) {
-                rightCount++;
+            if (obj->getBoundingBox().getMax()[c.getAxis()] > c.getPosition()[c.getAxis()]) {
+                c.right.push_back(obj);
+            }
+            if (c.getPosition()[c.getAxis()] == obj->getBoundingBox().getMax()[c.getAxis()]
+            && c.getPosition()[c.getAxis()] == obj->getBoundingBox().getMin()[c.getAxis()]) {
+                if (obj->getNormal()[c.getAxis()] >= 0.0) {
+                    c.right.push_back(obj);
+                } else {
+                    c.left.push_back(obj);
+                }
             }
         }
-        glm::dvec3 p = c.getPostition();
+        glm::dvec3 p = c.getPosition();
         for (double val = 0; val < 3; val++) {
             if (val != c.getAxis()) {
                 p[val] = bbox.getMax()[val];
             }
         }
-        p = p - bbox.getMin();
-        leftbbox = glm::abs(p[0]*p[1]*p[2]);
-        p = c.getPostition();
+        BoundingBox leftbbox = BoundingBox(bbox.getMin(), p);
         for (double val = 0; val < 3; val++) {
             if (val != c.getAxis()) {
                 p[val] = bbox.getMin()[val];
             }
         }
-        p = bbox.getMax() - p;
-        rightbbox = glm::abs(p[0]*p[1]*p[2]);
-
-        double sam = ((leftCount*leftbbox)+(rightCount*rightbbox))/bbox.volume();
+        BoundingBox rightbbox = BoundingBox(p, bbox.getMax());
+        double sam = ((c.left.size()*leftbbox.volume())+(c.right.size()*rightbbox.volume()))/bbox.volume();
         if (minsam == -1 || sam < minsam) {
             minsam = sam;
             ret = c;
         }
-        return ret;
-
+        
+        c.leftbbox = leftbbox;
+        c.rightbbox = rightbbox;
     }
+    return ret;
 
 }
 
+Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int leafSize) {
+    //change later have to get from traceui
+    int depthLimit = 0;
+    if (objList.size() <= leafSize || ++depth == depthLimit) {
+        return Node(nullptr, nullptr, nullptr, objList);
+    }
+    splitPlane sp = findBestSplitPlane(objList, bbox);
+    vector<Geometry*> left = sp.left;
+
+    vector<Geometry*> right = sp.right;
+
+    if (right.empty() || left.empty()) {
+        return Node(nullptr, nullptr, nullptr, objList);
+    } else {
+        Node left_node = buildTree(left, sp.leftbbox, depth, leafSize);
+        Node right_node = buildTree(right, sp.rightbbox, depth, leafSize); 
+        return Node(&sp, &left_node, &right_node, vector<Geometry*>());
+    }
+}
 

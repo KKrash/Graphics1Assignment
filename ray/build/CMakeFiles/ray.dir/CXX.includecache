@@ -422,25 +422,25 @@ mapbox/earcut.hpp
 array
 -
 
-/u/karahp22/Graphics/ray/RayTracer.cpp
+/u/sashankm/Graphics1Assignment/ray/RayTracer.cpp
 RayTracer.h
-/u/karahp22/Graphics/ray/RayTracer.h
+/u/sashankm/Graphics1Assignment/ray/RayTracer.h
 scene/light.h
-/u/karahp22/Graphics/ray/scene/light.h
+/u/sashankm/Graphics1Assignment/ray/scene/light.h
 scene/material.h
-/u/karahp22/Graphics/ray/scene/material.h
+/u/sashankm/Graphics1Assignment/ray/scene/material.h
 scene/ray.h
-/u/karahp22/Graphics/ray/scene/ray.h
+/u/sashankm/Graphics1Assignment/ray/scene/ray.h
 parser/JsonParser.h
-/u/karahp22/Graphics/ray/parser/JsonParser.h
+/u/sashankm/Graphics1Assignment/ray/parser/JsonParser.h
 parser/Parser.h
-/u/karahp22/Graphics/ray/parser/Parser.h
+/u/sashankm/Graphics1Assignment/ray/parser/Parser.h
 parser/Tokenizer.h
-/u/karahp22/Graphics/ray/parser/Tokenizer.h
+/u/sashankm/Graphics1Assignment/ray/parser/Tokenizer.h
 json.hpp
 -
 ui/TraceUI.h
-/u/karahp22/Graphics/ray/ui/TraceUI.h
+/u/sashankm/Graphics1Assignment/ray/ui/TraceUI.h
 algorithm
 -
 cmath
@@ -456,11 +456,11 @@ fstream
 iostream
 -
 
-/u/karahp22/Graphics/ray/RayTracer.h
+/u/sashankm/Graphics1Assignment/ray/RayTracer.h
 scene/cubeMap.h
-/u/karahp22/Graphics/ray/scene/cubeMap.h
+/u/sashankm/Graphics1Assignment/ray/scene/cubeMap.h
 scene/ray.h
-/u/karahp22/Graphics/ray/scene/ray.h
+/u/sashankm/Graphics1Assignment/ray/scene/ray.h
 glm/vec3.hpp
 -
 mutex
@@ -472,29 +472,29 @@ thread
 time.h
 -
 
-/u/karahp22/Graphics/ray/SceneObjects/Box.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Box.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 
-/u/karahp22/Graphics/ray/SceneObjects/Cone.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cone.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 
-/u/karahp22/Graphics/ray/SceneObjects/Cylinder.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cylinder.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 
-/u/karahp22/Graphics/ray/SceneObjects/Sphere.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Sphere.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 
-/u/karahp22/Graphics/ray/SceneObjects/Square.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Square.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 
-/u/karahp22/Graphics/ray/SceneObjects/trimesh.cpp
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/trimesh.cpp
 trimesh.h
-/u/karahp22/Graphics/ray/SceneObjects/trimesh.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/trimesh.h
 algorithm
 -
 assert.h
@@ -506,11 +506,11 @@ float.h
 string.h
 -
 ../ui/TraceUI.h
-/u/karahp22/Graphics/ray/ui/TraceUI.h
+/u/sashankm/Graphics1Assignment/ray/ui/TraceUI.h
 iostream
 -
 
-/u/karahp22/Graphics/ray/SceneObjects/trimesh.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/trimesh.h
 list
 -
 memory
@@ -518,31 +518,31 @@ memory
 vector
 -
 ../scene/kdTree.h
-/u/karahp22/Graphics/ray/scene/kdTree.h
+/u/sashankm/Graphics1Assignment/ray/scene/kdTree.h
 ../scene/material.h
-/u/karahp22/Graphics/ray/scene/material.h
+/u/sashankm/Graphics1Assignment/ray/scene/material.h
 ../scene/ray.h
-/u/karahp22/Graphics/ray/scene/ray.h
+/u/sashankm/Graphics1Assignment/ray/scene/ray.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 glm/gtc/matrix_transform.hpp
 -
 glm/vec3.hpp
 -
 
-/u/karahp22/Graphics/ray/fileio/buffer.h
+/u/sashankm/Graphics1Assignment/ray/fileio/buffer.h
 iostream
 -
 string
 -
 
-/u/karahp22/Graphics/ray/parser/JsonParser.cpp
+/u/sashankm/Graphics1Assignment/ray/parser/JsonParser.cpp
 JsonParser.h
-/u/karahp22/Graphics/ray/parser/JsonParser.h
+/u/sashankm/Graphics1Assignment/ray/parser/JsonParser.h
 ParserException.h
-/u/karahp22/Graphics/ray/parser/ParserException.h
+/u/sashankm/Graphics1Assignment/ray/parser/ParserException.h
 tiny_obj_loader.h
-/u/karahp22/Graphics/ray/parser/tiny_obj_loader.h
+/u/sashankm/Graphics1Assignment/ray/parser/tiny_obj_loader.h
 sstream
 -
 glm/gtc/type_ptr.hpp
@@ -554,7 +554,7 @@ unordered_map
 json.hpp
 -
 
-/u/karahp22/Graphics/ray/parser/JsonParser.h
+/u/sashankm/Graphics1Assignment/ray/parser/JsonParser.h
 map
 -
 string
@@ -574,23 +574,23 @@ glm/vec4.hpp
 json.hpp
 -
 ../SceneObjects/Box.h
-/u/karahp22/Graphics/ray/SceneObjects/Box.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Box.h
 ../SceneObjects/Cone.h
-/u/karahp22/Graphics/ray/SceneObjects/Cone.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cone.h
 ../SceneObjects/Cylinder.h
-/u/karahp22/Graphics/ray/SceneObjects/Cylinder.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cylinder.h
 ../SceneObjects/Sphere.h
-/u/karahp22/Graphics/ray/SceneObjects/Sphere.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Sphere.h
 ../SceneObjects/Square.h
-/u/karahp22/Graphics/ray/SceneObjects/Square.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Square.h
 ../SceneObjects/trimesh.h
-/u/karahp22/Graphics/ray/SceneObjects/trimesh.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/trimesh.h
 ../scene/light.h
-/u/karahp22/Graphics/ray/scene/light.h
+/u/sashankm/Graphics1Assignment/ray/scene/light.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 
-/u/karahp22/Graphics/ray/parser/Parser.cpp
+/u/sashankm/Graphics1Assignment/ray/parser/Parser.cpp
 fstream
 -
 iostream
@@ -600,15 +600,15 @@ memory
 sstream
 -
 ../scene/material.h
-/u/karahp22/Graphics/ray/scene/material.h
+/u/sashankm/Graphics1Assignment/ray/scene/material.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 ../ui/TraceUI.h
-/u/karahp22/Graphics/ray/ui/TraceUI.h
+/u/sashankm/Graphics1Assignment/ray/ui/TraceUI.h
 Parser.h
-/u/karahp22/Graphics/ray/parser/Parser.h
+/u/sashankm/Graphics1Assignment/ray/parser/Parser.h
 Tokenizer.h
-/u/karahp22/Graphics/ray/parser/Tokenizer.h
+/u/sashankm/Graphics1Assignment/ray/parser/Tokenizer.h
 glm/glm.hpp
 -
 glm/gtx/transform.hpp
@@ -616,41 +616,41 @@ glm/gtx/transform.hpp
 glm/mat4x4.hpp
 -
 
-/u/karahp22/Graphics/ray/parser/Parser.h
+/u/sashankm/Graphics1Assignment/ray/parser/Parser.h
 map
 -
 string
 -
 ParserException.h
-/u/karahp22/Graphics/ray/parser/ParserException.h
+/u/sashankm/Graphics1Assignment/ray/parser/ParserException.h
 Tokenizer.h
-/u/karahp22/Graphics/ray/parser/Tokenizer.h
+/u/sashankm/Graphics1Assignment/ray/parser/Tokenizer.h
 glm/vec3.hpp
 -
 glm/vec4.hpp
 -
 ../SceneObjects/Box.h
-/u/karahp22/Graphics/ray/SceneObjects/Box.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Box.h
 ../SceneObjects/Cone.h
-/u/karahp22/Graphics/ray/SceneObjects/Cone.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cone.h
 ../SceneObjects/Cylinder.h
-/u/karahp22/Graphics/ray/SceneObjects/Cylinder.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cylinder.h
 ../SceneObjects/Sphere.h
-/u/karahp22/Graphics/ray/SceneObjects/Sphere.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Sphere.h
 ../SceneObjects/Square.h
-/u/karahp22/Graphics/ray/SceneObjects/Square.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Square.h
 ../SceneObjects/trimesh.h
-/u/karahp22/Graphics/ray/SceneObjects/trimesh.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/trimesh.h
 ../scene/light.h
-/u/karahp22/Graphics/ray/scene/light.h
+/u/sashankm/Graphics1Assignment/ray/scene/light.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 
-/u/karahp22/Graphics/ray/parser/ParserException.h
+/u/sashankm/Graphics1Assignment/ray/parser/ParserException.h
 string
 -
 
-/u/karahp22/Graphics/ray/parser/Token.h
+/u/sashankm/Graphics1Assignment/ray/parser/Token.h
 iostream
 -
 map
@@ -658,55 +658,59 @@ map
 string
 -
 ParserException.h
-/u/karahp22/Graphics/ray/parser/ParserException.h
+/u/sashankm/Graphics1Assignment/ray/parser/ParserException.h
 
-/u/karahp22/Graphics/ray/parser/Tokenizer.h
+/u/sashankm/Graphics1Assignment/ray/parser/Tokenizer.h
 ../fileio/buffer.h
-/u/karahp22/Graphics/ray/fileio/buffer.h
+/u/sashankm/Graphics1Assignment/ray/fileio/buffer.h
 Token.h
-/u/karahp22/Graphics/ray/parser/Token.h
+/u/sashankm/Graphics1Assignment/ray/parser/Token.h
 memory
 -
 string
 -
 
-/u/karahp22/Graphics/ray/scene/bbox.h
+/u/sashankm/Graphics1Assignment/ray/scene/bbox.h
 glm/vec3.hpp
 -
 
-/u/karahp22/Graphics/ray/scene/camera.h
+/u/sashankm/Graphics1Assignment/ray/scene/camera.h
 ray.h
-/u/karahp22/Graphics/ray/scene/ray.h
+/u/sashankm/Graphics1Assignment/ray/scene/ray.h
 glm/mat3x3.hpp
 -
 glm/vec3.hpp
 -
 
-/u/karahp22/Graphics/ray/scene/cubeMap.h
+/u/sashankm/Graphics1Assignment/ray/scene/cubeMap.h
 glm/vec3.hpp
 -
 memory
 -
 
-/u/karahp22/Graphics/ray/scene/kdTree.h
+/u/sashankm/Graphics1Assignment/ray/scene/kdTree.cpp
+kdTree.h
+/u/sashankm/Graphics1Assignment/ray/scene/kdTree.h
+
+/u/sashankm/Graphics1Assignment/ray/scene/kdTree.h
 vector
 -
 glm/vec3.hpp
 -
-ray.h
-/u/karahp22/Graphics/ray/scene/ray.h
+scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 
-/u/karahp22/Graphics/ray/scene/light.h
+/u/sashankm/Graphics1Assignment/ray/scene/light.h
 algorithm
 -
 ../ui/TraceUI.h
-/u/karahp22/Graphics/ray/ui/TraceUI.h
+/u/sashankm/Graphics1Assignment/ray/ui/TraceUI.h
 scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 FL/gl.h
 -
 
-/u/karahp22/Graphics/ray/scene/material.h
+/u/sashankm/Graphics1Assignment/ray/scene/material.h
 glm/glm.hpp
 -
 glm/vec2.hpp
@@ -720,9 +724,9 @@ string
 vector
 -
 
-/u/karahp22/Graphics/ray/scene/ray.h
+/u/sashankm/Graphics1Assignment/ray/scene/ray.h
 material.h
-/u/karahp22/Graphics/ray/scene/material.h
+/u/sashankm/Graphics1Assignment/ray/scene/material.h
 glm/vec2.hpp
 -
 glm/vec3.hpp
@@ -730,17 +734,17 @@ glm/vec3.hpp
 memory
 -
 
-/u/karahp22/Graphics/ray/scene/scene.cpp
+/u/sashankm/Graphics1Assignment/ray/scene/scene.cpp
 cmath
 -
 ../ui/TraceUI.h
-/u/karahp22/Graphics/ray/ui/TraceUI.h
+/u/sashankm/Graphics1Assignment/ray/ui/TraceUI.h
 kdTree.h
-/u/karahp22/Graphics/ray/scene/kdTree.h
+/u/sashankm/Graphics1Assignment/ray/scene/kdTree.h
 light.h
-/u/karahp22/Graphics/ray/scene/light.h
+/u/sashankm/Graphics1Assignment/ray/scene/light.h
 scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 glm/gtx/extended_min_max.hpp
 -
 glm/gtx/io.hpp
@@ -748,7 +752,7 @@ glm/gtx/io.hpp
 iostream
 -
 
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 algorithm
 -
 map
@@ -762,13 +766,13 @@ string
 vector
 -
 bbox.h
-/u/karahp22/Graphics/ray/scene/bbox.h
+/u/sashankm/Graphics1Assignment/ray/scene/bbox.h
 camera.h
-/u/karahp22/Graphics/ray/scene/camera.h
+/u/sashankm/Graphics1Assignment/ray/scene/camera.h
 material.h
-/u/karahp22/Graphics/ray/scene/material.h
+/u/sashankm/Graphics1Assignment/ray/scene/material.h
 ray.h
-/u/karahp22/Graphics/ray/scene/ray.h
+/u/sashankm/Graphics1Assignment/ray/scene/ray.h
 glm/geometric.hpp
 -
 glm/mat3x3.hpp
@@ -782,13 +786,13 @@ glm/vec3.hpp
 glm/vec4.hpp
 -
 
-/u/karahp22/Graphics/ray/ui/TraceUI.h
+/u/sashankm/Graphics1Assignment/ray/ui/TraceUI.h
 memory
 -
 string
 -
 
-/u/karahp22/Graphics/ray/ui/glObjects.cpp
+/u/sashankm/Graphics1Assignment/ray/ui/glObjects.cpp
 FL/gl.h
 -
 FL/glu.h
@@ -796,21 +800,21 @@ FL/glu.h
 math.h
 -
 ../scene/light.h
-/u/karahp22/Graphics/ray/scene/light.h
+/u/sashankm/Graphics1Assignment/ray/scene/light.h
 ../scene/ray.h
-/u/karahp22/Graphics/ray/scene/ray.h
+/u/sashankm/Graphics1Assignment/ray/scene/ray.h
 ../scene/scene.h
-/u/karahp22/Graphics/ray/scene/scene.h
+/u/sashankm/Graphics1Assignment/ray/scene/scene.h
 ../SceneObjects/Box.h
-/u/karahp22/Graphics/ray/SceneObjects/Box.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Box.h
 ../SceneObjects/Cone.h
-/u/karahp22/Graphics/ray/SceneObjects/Cone.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cone.h
 ../SceneObjects/Cylinder.h
-/u/karahp22/Graphics/ray/SceneObjects/Cylinder.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Cylinder.h
 ../SceneObjects/Sphere.h
-/u/karahp22/Graphics/ray/SceneObjects/Sphere.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Sphere.h
 ../SceneObjects/Square.h
-/u/karahp22/Graphics/ray/SceneObjects/Square.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/Square.h
 ../SceneObjects/trimesh.h
-/u/karahp22/Graphics/ray/SceneObjects/trimesh.h
+/u/sashankm/Graphics1Assignment/ray/SceneObjects/trimesh.h
 

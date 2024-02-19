@@ -19,6 +19,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ray.dir/scene/bbox.cc.o"
   "CMakeFiles/ray.dir/scene/camera.cpp.o"
   "CMakeFiles/ray.dir/scene/cubeMap.cpp.o"
+  "CMakeFiles/ray.dir/scene/kdTree.cpp.o"
   "CMakeFiles/ray.dir/scene/light.cpp.o"
   "CMakeFiles/ray.dir/scene/material.cpp.o"
   "CMakeFiles/ray.dir/scene/ray.cpp.o"

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /u/karahp22/Graphics/ray
+CMAKE_SOURCE_DIR = /u/sashankm/Graphics1Assignment/ray
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /u/karahp22/Graphics/ray/build
+CMAKE_BINARY_DIR = /u/sashankm/Graphics1Assignment/ray/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /u/karahp22/Graphics/ray/build/CMakeFiles /u/karahp22/Graphics/ray/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /u/sashankm/Graphics1Assignment/ray/build/CMakeFiles /u/sashankm/Graphics1Assignment/ray/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /u/karahp22/Graphics/ray/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /u/sashankm/Graphics1Assignment/ray/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -663,6 +663,33 @@ scene/cubeMap.cpp.s:
 	$(MAKE) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/scene/cubeMap.cpp.s
 .PHONY : scene/cubeMap.cpp.s
 
+scene/kdTree.o: scene/kdTree.cpp.o
+
+.PHONY : scene/kdTree.o
+
+# target to build an object file
+scene/kdTree.cpp.o:
+	$(MAKE) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/scene/kdTree.cpp.o
+.PHONY : scene/kdTree.cpp.o
+
+scene/kdTree.i: scene/kdTree.cpp.i
+
+.PHONY : scene/kdTree.i
+
+# target to preprocess a source file
+scene/kdTree.cpp.i:
+	$(MAKE) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/scene/kdTree.cpp.i
+.PHONY : scene/kdTree.cpp.i
+
+scene/kdTree.s: scene/kdTree.cpp.s
+
+.PHONY : scene/kdTree.s
+
+# target to generate assembly for a file
+scene/kdTree.cpp.s:
+	$(MAKE) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/scene/kdTree.cpp.s
+.PHONY : scene/kdTree.cpp.s
+
 scene/light.o: scene/light.cpp.o
 
 .PHONY : scene/light.o
@@ -1083,6 +1110,9 @@ help:
 	@echo "... scene/cubeMap.o"
 	@echo "... scene/cubeMap.i"
 	@echo "... scene/cubeMap.s"
+	@echo "... scene/kdTree.o"
+	@echo "... scene/kdTree.i"
+	@echo "... scene/kdTree.s"
 	@echo "... scene/light.o"
 	@echo "... scene/light.i"
 	@echo "... scene/light.s"

@@ -4,7 +4,7 @@
 #pragma once
 #include <vector>
 #include <glm/vec3.hpp>
-#include "ray.h"
+#include "scene.h"
 class Geometry;
 class BoundingBox;
 // // Note: you can put kd-tree here
@@ -14,24 +14,29 @@ class BoundingBox;
 class splitPlane{
     int axis;
     glm::dvec3 position;
+    
 
 public:
-    splitPlane(int axis, glm::dvec3 position);
-    glm::dvec3 getPostition();
+    splitPlane(int a, glm::dvec3 p);
+    glm::dvec3 getPosition();
     void setPosition(glm::dvec3 p);
     int getAxis();
-    int leftCount = 0 ;
+    int leftCount = 0;
     int rightCount = 0;
+    BoundingBox leftbbox;
+    BoundingBox rightbbox;
+    std::vector <Geometry*> left = std::vector<Geometry*>();
+    std::vector <Geometry*> right = std::vector<Geometry*>();
 };
 
 class Node{
-    splitPlane plane;
+    splitPlane* plane;
     Node *leftNode;
     Node *rightNode;
     std::vector <Geometry*> objList;
 
 public:
-    Node(splitPlane plane, Node *leftNode, Node *rightNode, std::vector<Geometry*> objList);
+    Node(splitPlane* p, Node *l, Node *r, std::vector<Geometry*> ol);
     std::vector <Geometry*> getObjectList() {return objList;}
     void addToObjectList(Geometry* shape) {objList.push_back(shape);}
     bool findIntersectionSplit (ray &r, isect i, double tmin, double tmax);
