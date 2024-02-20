@@ -5,17 +5,16 @@
 #include <vector>
 #include <glm/vec3.hpp>
 #include "scene.h"
+#include "../ui/TraceUI.h"
 class Geometry;
 class BoundingBox;
+extern TraceUI *traceUI;
 // // Note: you can put kd-tree here
-
-
 
 class splitPlane{
     int axis;
     glm::dvec3 position;
     
-
 public:
     splitPlane(int a, glm::dvec3 p);
     glm::dvec3 getPosition();
@@ -40,8 +39,8 @@ public:
     Node(splitPlane* p, Node *l, Node *r, std::vector<Geometry*> ol);
     std::vector <Geometry*> getObjectList() {return objList;}
     void addToObjectList(Geometry* shape) {objList.push_back(shape);}
-    bool findIntersectionSplit (Node n, double tmin, double tmax);
-    void findIntersectionLeaf (ray &r, isect &i, double tmin, double tmax);
+    bool Node::findIntersectionSplit(Node *n, ray &r, isect &i, double tmin, double tmax);
+    void findIntersectionLeaf (Node *n, ray &r, isect &i, double tmin, double tmax);
 };
 
 class kdTree{

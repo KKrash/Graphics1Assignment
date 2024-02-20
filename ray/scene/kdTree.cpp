@@ -46,7 +46,6 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
 
             candidates.push_back(sp1);
             candidates.push_back(sp2);
-            
         }
     }
     double minsam = -1;
@@ -94,10 +93,8 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
 
 }
 
-Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int leafSize) {
-    //change later have to get from traceui
-    int depthLimit = 0;
-    if (objList.size() <= leafSize || ++depth == depthLimit) {
+Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth) {
+    if (objList.size() <= traceUI->getLeafSize() || ++depth == traceUI->getMaxDepth()) {
         return Node(nullptr, nullptr, nullptr, objList);
     }
     splitPlane sp = findBestSplitPlane(objList, bbox);
@@ -107,45 +104,105 @@ Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int
     if (right.empty() || left.empty()) {
         return Node(nullptr, nullptr, nullptr, objList);
     } else {
-        Node left_node = buildTree(left, sp.leftbbox, depth, leafSize);
-        Node right_node = buildTree(right, sp.rightbbox, depth, leafSize); 
+        Node left_node = buildTree(left, sp.leftbbox, depth+1);
+        Node right_node = buildTree(right, sp.rightbbox, depth+1); 
         return Node(&sp, &left_node, &right_node, vector<Geometry*>());
     }
 }
 
-bool Node::findIntersectionSplit(Node n, double tmin, double tmax)
+bool Node::findIntersectionSplit(Node *n, ray &r, isect &i, double tmin, double tmax)
 {
-    // if ray is nearly parallel to the split plane, calculate as near to parallel as possible
-    // else
-    //{
-        if (tmin >= n.plane->leftbbox.getMin()[n.plane->getAxis()] && tmax <= n.plane->leftbbox.getMax()[n.plane->getAxis()])
+    if (n->leftNode == NULL && n->rightNode == NULL)
+    {
+        findIntersectionLeaf(n, r, i, tmin, tmax);
+        return true;
+    }
+    double rayPosition = r.getPosition()[n->plane->getAxis()];
+    double planePosition = n->plane->getPosition()[n->plane->getAxis()];
+    // are they parallel to each other?
+    if (rayPosition <= planePosition+RAY_EPSILON && rayPosition >= planePosition-RAY_EPSILON)
+    {
+        if (rayPosition < planePosition)
         {
-            if(n.leftNode, tmin, tmax)
+            return findIntersectionSplit(n->leftNode, r, i, tmin, tmax);
+        }
+        else if (rayPosition > planePosition)
+        {
+            return findIntersectionSplit(n->rightNode, r, i, tmin, tmax);
+        }
+        else
+        {
+            bool leftSide = findIntersectionSplit(n->leftNode, r, i, tmin, tmax);
+            bool rightSide = findIntersectionSplit(n->rightNode, r, i, tmin, tmax);
+            if (leftSide || rightSide)
             {
                 return true;
             }
         }
-        else if (tmin >= n.plane->rightbbox.getMin()[n.plane->getAxis()] && tmax <= n.plane->rightbbox.getMax()[n.plane->getAxis()])
+    }
+    else
+    {
+        // they are not near-parallel, check each side
+        bool intersectsLeft = (tmin > n->plane->leftbbox.getMin()[n->plane->getAxis()] && (tmax < n->plane->leftbbox.getMax()[n->plane->getAxis()]));
+        bool intersectRight = (tmin > n->plane->rightbbox.getMin()[n->plane->getAxis()] && (tmax <= n->plane->rightbbox.getMax()[n->plane->getAxis()]));
+        if (rayPosition < 0.0)
         {
-            if(n.rightNode, tmin, tmax)
+            // heading in the "negative" direction, so check right then left
+            if (intersectRight)
             {
-                return true;
+                if (findIntersectionSplit(n->rightNode, r, i, tmin, tmax)) {return true;};
+            }
+            if (intersectsLeft)
+            {
+                if (findIntersectionSplit(n->leftNode, r, i, tmin, tmax)) {return true;};
+            }
+        }
+        else if (rayPosition> 0.0)
+        {
+            // heading in the "positive" direction, so check left then right
+            if (intersectsLeft)
+            {
+                if (findIntersectionSplit(n->leftNode, r, i, tmin, tmax)) {return true;};
+            }
+            if (intersectRight)
+            {
+                if (findIntersectionSplit(n->rightNode, r, i, tmin, tmax)) {return true;};
             }
         }
         else
         {
-            // find the nearest interaction, and if that's true return true
-            // find the farthest interaction, and then if this is true return true
+            // if they don't perfectly fit into the boxes? make sure to find how they intersect in the other stuff
+            if (rayPosition < 0.0)
+            {
+                bool checkRight = findIntersectionSplit(n->rightNode, r, i, tmin, n->plane->rightbbox.getMin()[n->plane->getAxis()]);
+                bool checkLeft = findIntersectionSplit(n->leftNode, r, i, n->plane->leftbbox.getMax()[n->plane->getAxis()], tmax);
+                if (checkRight || checkLeft)
+                {
+                    return true;
+                }
+            }
+            else if (rayPosition> 0.0)
+            {
+                bool checkLeft = findIntersectionSplit(n->leftNode, r, i, tmin, n->plane->leftbbox.getMax()[n->plane->getAxis()]);
+                bool checkRight = findIntersectionSplit(n->rightNode, r, i, n->plane->rightbbox.getMin()[n->plane->getAxis()], tmax);
+                if (checkLeft || checkRight)
+                {
+                    return true;
+                }
+            }
+            
         }
-    //}
+    }
+    // none fo these apply? At all? Then no intersection
     return false;
 }
 
-void Node::findIntersectionLeaf(ray &r, isect &i, double tmin, double tmax)
+void Node::findIntersectionLeaf(Node *n, ray &r, isect &i, double tmin, double tmax)
 {
+    
     // peekaboo!
     isect i_c_u; 
-    for (int j = 0; j < objList.size(); j++)
+    for (int j = 0; j < n->getObjectList().size(); j++)
     {
         if (objList.at(j)->intersect(r, i) && i_c_u.getT() >= tmin && i_c_u.getT() <= tmax)
         {
