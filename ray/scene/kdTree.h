@@ -25,8 +25,8 @@ public:
     int rightCount = 0;
     BoundingBox leftbbox;
     BoundingBox rightbbox;
-    std::vector <Geometry*> left = std::vector<Geometry*>();
-    std::vector <Geometry*> right = std::vector<Geometry*>();
+    std::vector <Geometry*> left;
+    std::vector <Geometry*> right;
 };
 
 class Node{
@@ -54,7 +54,7 @@ public:
     kdTree(int axis, glm::dvec3 position, Node *root, std::vector<Geometry*> objList);
 };
 
-Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int leafSize);
+Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth);
 splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox);
 
 

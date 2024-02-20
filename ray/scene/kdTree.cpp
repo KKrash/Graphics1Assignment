@@ -20,7 +20,7 @@ void splitPlane::setPosition(glm::dvec3 p ){
     position = p;
 }
 
-splitPlane::splitPlane(int a, glm::dvec3 p) {
+splitPlane::splitPlane(int a, glm::dvec3 p) { 
     axis = a; 
     position = p;
 }
@@ -33,6 +33,8 @@ Node::Node(splitPlane* p, Node *l, Node *r, std::vector<Geometry*> ol) {
 }
 
 splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox){
+
+    //TODO SORTING
     vector<splitPlane> candidates = vector<splitPlane>();
     for (int axis = 0; axis < 3; axis++) {
         for (Geometry* obj : objList) {
@@ -51,19 +53,21 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
     double minsam = -1;
     splitPlane ret = candidates[0];
     for (splitPlane c : candidates) {
+        int leftcount = 0;
+        int rightcount = 0;
         for (Geometry* obj : objList) {
             if (obj->getBoundingBox().getMin()[c.getAxis()] < c.getPosition()[c.getAxis()]) {
-                c.left.push_back(obj);
+                leftcount++;
             }
             if (obj->getBoundingBox().getMax()[c.getAxis()] > c.getPosition()[c.getAxis()]) {
-                c.right.push_back(obj);
+                rightcount++;
             }
             if (c.getPosition()[c.getAxis()] == obj->getBoundingBox().getMax()[c.getAxis()]
             && c.getPosition()[c.getAxis()] == obj->getBoundingBox().getMin()[c.getAxis()]) {
                 if (obj->getNormal()[c.getAxis()] >= 0.0) {
-                    c.right.push_back(obj);
+                    rightcount++;
                 } else {
-                    c.left.push_back(obj);
+                    leftcount++;
                 }
             }
         }
@@ -80,7 +84,7 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
             }
         }
         BoundingBox rightbbox = BoundingBox(p, bbox.getMax());
-        double sam = ((c.left.size()*leftbbox.volume())+(c.right.size()*rightbbox.volume()))/bbox.volume();
+        double sam = ((leftcount*leftbbox.area())+(rightcount*rightbbox.area()))/bbox.area();
         if (minsam == -1 || sam < minsam) {
             minsam = sam;
             ret = c;
@@ -88,6 +92,24 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
         
         c.leftbbox = leftbbox;
         c.rightbbox = rightbbox;
+    }
+    ret.left = vector<Geometry*>();
+    ret.right = vector<Geometry*>();
+    for (Geometry* obj : objList) {
+        if (obj->getBoundingBox().getMin()[ret.getAxis()] < ret.getPosition()[ret.getAxis()]) {
+                ret.left.push_back(obj);
+            }
+            if (obj->getBoundingBox().getMax()[ret.getAxis()] > ret.getPosition()[ret.getAxis()]) {
+                ret.right.push_back(obj);
+            }
+            if (ret.getPosition()[ret.getAxis()] == obj->getBoundingBox().getMax()[ret.getAxis()]
+            && ret.getPosition()[ret.getAxis()] == obj->getBoundingBox().getMin()[ret.getAxis()]) {
+                if (obj->getNormal()[ret.getAxis()] >= 0.0) {
+                    ret.right.push_back(obj);
+                } else {
+                    ret.left.push_back(obj);
+                }
+        }
     }
     return ret;
 
@@ -204,11 +226,10 @@ void Node::findIntersectionLeaf(Node *n, ray &r, isect &i, double tmin, double t
     isect i_c_u; 
     for (int j = 0; j < n->getObjectList().size(); j++)
     {
-        if (objList.at(j)->intersect(r, i) && i_c_u.getT() >= tmin && i_c_u.getT() <= tmax)
+        if (objList.at(j)->intersect(r, i_c_u) && i_c_u.getT() >= tmin && i_c_u.getT() <= tmax)
         {
             i = i_c_u;
         }
     }
-
 }
 
