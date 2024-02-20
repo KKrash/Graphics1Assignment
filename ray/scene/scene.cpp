@@ -1,7 +1,6 @@
 #include <cmath>
 
 #include "../ui/TraceUI.h"
-#include "kdTree.h"
 #include "light.h"
 #include "scene.h"
 #include <glm/gtx/extended_min_max.hpp>
@@ -9,6 +8,10 @@
 #include <iostream>
 
 using namespace std;
+
+class Node;
+
+Node * root;
 
 bool Geometry::intersect(ray &r, isect &i) const {
   double tmin, tmax;
@@ -112,8 +115,11 @@ void Scene::add(Light *light) { lights.emplace_back(light); }
 // Get any intersection with an object.  Return information about the
 // intersection through the reference parameter.
 bool Scene::intersect(ray &r, isect &i) const {
+  
   double tmin = 0.0;
   double tmax = 0.0;
+  sceneBounds.intersect(r, tmin, tmax);
+  root->findIntersectionSplit(root, r, i, tmin, tmax);
   bool have_one = false;
   for (const auto &obj : objects) {
     isect cur;
@@ -140,4 +146,10 @@ TextureMap *Scene::getTexture(string name) {
     return textureCache[name].get();
   }
   return itr->second.get();
+}
+
+Node Scene::build(std::vector <Geometry*> objList, BoundingBox bbox, int depth) {
+  Node temp = buildTree(objList, bbox, depth);
+  root = &temp;
+  return temp;
 }

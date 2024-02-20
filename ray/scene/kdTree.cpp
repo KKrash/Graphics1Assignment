@@ -1,5 +1,6 @@
 #include "kdTree.h"
-
+#include <iostream>
+using namespace std;
 
 using namespace std;
 
@@ -116,6 +117,7 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
 }
 
 Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth) {
+    cout << "Recursive Build Tree" << endl;
     if (objList.size() <= traceUI->getLeafSize() || ++depth == traceUI->getMaxDepth()) {
         return Node(nullptr, nullptr, nullptr, objList);
     }
@@ -128,7 +130,7 @@ Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth) {
     } else {
         Node left_node = buildTree(left, sp.leftbbox, depth+1);
         Node right_node = buildTree(right, sp.rightbbox, depth+1); 
-        return Node(&sp, &left_node, &right_node, vector<Geometry*>());
+        return Node(&sp, &left_node, &right_node, objList);
     }
 }
 
@@ -223,9 +225,9 @@ void Node::findIntersectionLeaf(Node *n, ray &r, isect &i, double tmin, double t
 {
     
     // peekaboo!
-    isect i_c_u; 
     for (int j = 0; j < n->getObjectList().size(); j++)
     {
+        isect i_c_u; 
         if (objList.at(j)->intersect(r, i_c_u) && i_c_u.getT() >= tmin && i_c_u.getT() <= tmax)
         {
             i = i_c_u;

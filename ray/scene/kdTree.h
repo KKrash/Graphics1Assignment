@@ -4,11 +4,13 @@
 #pragma once
 #include <vector>
 #include <glm/vec3.hpp>
-#include "scene.h"
 #include "../ui/TraceUI.h"
+#include "scene.h"
+
 class Geometry;
 class BoundingBox;
 extern TraceUI *traceUI;
+
 // // Note: you can put kd-tree here
 
 class splitPlane{
@@ -18,7 +20,7 @@ class splitPlane{
 public:
     splitPlane(int a, glm::dvec3 p);
     glm::dvec3 getPosition();
-    double splitPlane::getSpecificPart(int axis);
+    double getSpecificPart(int axis);
     void setPosition(glm::dvec3 p);
     int getAxis();
     int leftCount = 0;
@@ -39,7 +41,7 @@ public:
     Node(splitPlane* p, Node *l, Node *r, std::vector<Geometry*> ol);
     std::vector <Geometry*> getObjectList() {return objList;}
     void addToObjectList(Geometry* shape) {objList.push_back(shape);}
-    bool Node::findIntersectionSplit(Node *n, ray &r, isect &i, double tmin, double tmax);
+    bool findIntersectionSplit(Node *n, ray &r, isect &i, double tmin, double tmax);
     void findIntersectionLeaf (Node *n, ray &r, isect &i, double tmin, double tmax);
 };
 
@@ -56,6 +58,8 @@ public:
 
 Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth);
 splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox);
+
+
 
 
 #endif

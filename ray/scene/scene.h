@@ -8,6 +8,7 @@
 
 #ifndef __SCENE_H__
 #define __SCENE_H__
+#pragma once
 
 #include <algorithm>
 #include <map>
@@ -20,6 +21,7 @@
 #include "camera.h"
 #include "material.h"
 #include "ray.h"
+#include "kdTree.h"
 
 #include <glm/geometric.hpp>
 #include <glm/mat3x3.hpp>
@@ -32,8 +34,10 @@ using std::unique_ptr;
 
 class Light;
 class Scene;
+class Node;
 
 template <typename Obj> class KdTree;
+
 
 // A SceneElement is anything that lives within a scene. The behavior is
 // intentionally very barebones, since all actual entities are descended
@@ -156,6 +160,7 @@ protected:
 
 class Scene {
 public:
+  
   Scene();
   virtual ~Scene();
   // Don't try to copy or move a Scene
@@ -170,7 +175,7 @@ public:
   // Violation of this assumption may lead to double free or corruption
   void add(Geometry *obj);
   void add(Light *light);
-
+  Node build(std::vector <Geometry*> objList, BoundingBox bbox, int depth);
   bool intersect(ray &r, isect &i) const;
 
   auto beginLights() const { return lights.begin(); }
@@ -247,5 +252,7 @@ public:
 
   mutable std::vector<std::pair<ray *, isect *>> intersectCache;
 };
+
+
 
 #endif // __SCENE_H__

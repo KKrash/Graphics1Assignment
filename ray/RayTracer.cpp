@@ -7,6 +7,7 @@
 #include "scene/material.h"
 #include "scene/ray.h"
 #include "scene/scene.h"
+#include "scene/kdTree.h"
 
 #include "parser/JsonParser.h"
 #include "parser/Parser.h"
@@ -297,7 +298,7 @@ void RayTracer::traceSetup(int w, int h) {
   // YOUR CODE HERE
   // FIXME: Additional initializations
 
-  Node newTree = buildTree(scene->getAllObjects(), scene->bounds(), traceUI->getMaxDepth(), traceUI->getLeafSize());
+  scene->build(scene->getAllObjects(), scene->bounds(), 0);
   
 }
 // Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int leafSize);

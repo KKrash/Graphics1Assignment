@@ -30,41 +30,51 @@ CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../SceneObjects/Box.cpp
 CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../SceneObjects/Box.h
 CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../scene/bbox.h
 CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../scene/camera.h
+CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../scene/material.h
 CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../scene/ray.h
 CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../scene/scene.h
+CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../ui/TraceUI.h
 
 CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../SceneObjects/Cone.cpp
 CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../SceneObjects/Cone.h
 CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../scene/bbox.h
 CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../scene/camera.h
+CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../scene/material.h
 CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../scene/ray.h
 CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../scene/scene.h
+CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../ui/TraceUI.h
 
 CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../SceneObjects/Cylinder.cpp
 CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../SceneObjects/Cylinder.h
 CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../scene/bbox.h
 CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../scene/camera.h
+CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../scene/material.h
 CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../scene/ray.h
 CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../scene/scene.h
+CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../ui/TraceUI.h
 
 CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../SceneObjects/Sphere.cpp
 CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../SceneObjects/Sphere.h
 CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../scene/bbox.h
 CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../scene/camera.h
+CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../scene/material.h
 CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../scene/ray.h
 CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../scene/scene.h
+CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../ui/TraceUI.h
 
 CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../SceneObjects/Square.cpp
 CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../SceneObjects/Square.h
 CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../scene/bbox.h
 CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../scene/camera.h
+CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../scene/material.h
 CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../scene/ray.h
 CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../scene/scene.h
+CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../ui/TraceUI.h
 
 CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: ../SceneObjects/trimesh.cpp
 CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: ../SceneObjects/trimesh.h
@@ -184,9 +194,11 @@ CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../scene/material.h
 CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../scene/ray.h
 CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../scene/scene.h
+CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../ui/TraceUI.h
 
 CMakeFiles/ray.dir/scene/light.cpp.o: ../scene/bbox.h
 CMakeFiles/ray.dir/scene/light.cpp.o: ../scene/camera.h
+CMakeFiles/ray.dir/scene/light.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/scene/light.cpp.o: ../scene/light.cpp
 CMakeFiles/ray.dir/scene/light.cpp.o: ../scene/light.h
 CMakeFiles/ray.dir/scene/light.cpp.o: ../scene/material.h
@@ -197,6 +209,7 @@ CMakeFiles/ray.dir/scene/light.cpp.o: ../ui/TraceUI.h
 CMakeFiles/ray.dir/scene/material.cpp.o: ../fileio/images.h
 CMakeFiles/ray.dir/scene/material.cpp.o: ../scene/bbox.h
 CMakeFiles/ray.dir/scene/material.cpp.o: ../scene/camera.h
+CMakeFiles/ray.dir/scene/material.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/scene/material.cpp.o: ../scene/light.h
 CMakeFiles/ray.dir/scene/material.cpp.o: ../scene/material.cpp
 CMakeFiles/ray.dir/scene/material.cpp.o: ../scene/material.h
@@ -206,6 +219,7 @@ CMakeFiles/ray.dir/scene/material.cpp.o: ../ui/TraceUI.h
 
 CMakeFiles/ray.dir/scene/ray.cpp.o: ../scene/bbox.h
 CMakeFiles/ray.dir/scene/ray.cpp.o: ../scene/camera.h
+CMakeFiles/ray.dir/scene/ray.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/scene/ray.cpp.o: ../scene/material.h
 CMakeFiles/ray.dir/scene/ray.cpp.o: ../scene/ray.cpp
 CMakeFiles/ray.dir/scene/ray.cpp.o: ../scene/ray.h
@@ -282,6 +296,7 @@ CMakeFiles/ray.dir/ui/debuggingView.cpp.o: ../RayTracer.h
 CMakeFiles/ray.dir/ui/debuggingView.cpp.o: ../scene/bbox.h
 CMakeFiles/ray.dir/ui/debuggingView.cpp.o: ../scene/camera.h
 CMakeFiles/ray.dir/ui/debuggingView.cpp.o: ../scene/cubeMap.h
+CMakeFiles/ray.dir/ui/debuggingView.cpp.o: ../scene/kdTree.h
 CMakeFiles/ray.dir/ui/debuggingView.cpp.o: ../scene/light.h
 CMakeFiles/ray.dir/ui/debuggingView.cpp.o: ../scene/material.h
 CMakeFiles/ray.dir/ui/debuggingView.cpp.o: ../scene/ray.h

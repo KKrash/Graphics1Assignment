@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -Wextra -Wno-unknown-pragmas   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/lib/fltk -isystem /u/sashankm/Graphics1Assignment/ray/libs 
+CXX_INCLUDES = -I/usr/lib/fltk -isystem /u/karahp22/Graphics/ray/libs 
 
