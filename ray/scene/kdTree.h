@@ -5,6 +5,7 @@
 #include <vector>
 #include <glm/vec3.hpp>
 #include "scene.h"
+#include "../RayTracer.cpp"
 class Geometry;
 class BoundingBox;
 // // Note: you can put kd-tree here
@@ -26,8 +27,8 @@ public:
     int rightCount = 0;
     BoundingBox leftbbox;
     BoundingBox rightbbox;
-    std::vector <Geometry*> left = std::vector<Geometry*>();
-    std::vector <Geometry*> right = std::vector<Geometry*>();
+    std::vector <Geometry*> left;
+    std::vector <Geometry*> right;
 };
 
 class Node{
@@ -40,8 +41,8 @@ public:
     Node(splitPlane* p, Node *l, Node *r, std::vector<Geometry*> ol);
     std::vector <Geometry*> getObjectList() {return objList;}
     void addToObjectList(Geometry* shape) {objList.push_back(shape);}
-    bool findIntersectionSplit (Node n, double tmin, double tmax);
-    void findIntersectionLeaf (ray &r, isect &i, double tmin, double tmax);
+    bool findIntersectionSplit (Node n, ray &r, isect &i, double tmin, double tmax);
+    bool findIntersectionLeaf (ray &r, isect &i, double tmin, double tmax);
 };
 
 class kdTree{
@@ -55,7 +56,7 @@ public:
     kdTree(int axis, glm::dvec3 position, Node *root, std::vector<Geometry*> objList);
 };
 
-Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int leafSize);
+Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth);
 splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox);
 
 

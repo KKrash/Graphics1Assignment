@@ -20,7 +20,7 @@ void splitPlane::setPosition(glm::dvec3 p ){
     position = p;
 }
 
-splitPlane::splitPlane(int a, glm::dvec3 p) {
+splitPlane::splitPlane(int a, glm::dvec3 p) { 
     axis = a; 
     position = p;
 }
@@ -33,6 +33,8 @@ Node::Node(splitPlane* p, Node *l, Node *r, std::vector<Geometry*> ol) {
 }
 
 splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox){
+
+    //TODO SORTING
     vector<splitPlane> candidates = vector<splitPlane>();
     for (int axis = 0; axis < 3; axis++) {
         for (Geometry* obj : objList) {
@@ -52,19 +54,21 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
     double minsam = -1;
     splitPlane ret = candidates[0];
     for (splitPlane c : candidates) {
+        int leftcount = 0;
+        int rightcount = 0;
         for (Geometry* obj : objList) {
             if (obj->getBoundingBox().getMin()[c.getAxis()] < c.getPosition()[c.getAxis()]) {
-                c.left.push_back(obj);
+                leftcount++;
             }
             if (obj->getBoundingBox().getMax()[c.getAxis()] > c.getPosition()[c.getAxis()]) {
-                c.right.push_back(obj);
+                rightcount++;
             }
             if (c.getPosition()[c.getAxis()] == obj->getBoundingBox().getMax()[c.getAxis()]
             && c.getPosition()[c.getAxis()] == obj->getBoundingBox().getMin()[c.getAxis()]) {
                 if (obj->getNormal()[c.getAxis()] >= 0.0) {
-                    c.right.push_back(obj);
+                    rightcount++;
                 } else {
-                    c.left.push_back(obj);
+                    leftcount++;
                 }
             }
         }
@@ -81,7 +85,7 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
             }
         }
         BoundingBox rightbbox = BoundingBox(p, bbox.getMax());
-        double sam = ((c.left.size()*leftbbox.volume())+(c.right.size()*rightbbox.volume()))/bbox.volume();
+        double sam = ((leftcount*leftbbox.area())+(rightcount*rightbbox.area()))/bbox.area();
         if (minsam == -1 || sam < minsam) {
             minsam = sam;
             ret = c;
@@ -90,14 +94,30 @@ splitPlane findBestSplitPlane(std::vector <Geometry*> objList, BoundingBox bbox)
         c.leftbbox = leftbbox;
         c.rightbbox = rightbbox;
     }
+    ret.left = vector<Geometry*>();
+    ret.right = vector<Geometry*>();
+    for (Geometry* obj : objList) {
+        if (obj->getBoundingBox().getMin()[ret.getAxis()] < ret.getPosition()[ret.getAxis()]) {
+                ret.left.push_back(obj);
+            }
+            if (obj->getBoundingBox().getMax()[ret.getAxis()] > ret.getPosition()[ret.getAxis()]) {
+                ret.right.push_back(obj);
+            }
+            if (ret.getPosition()[ret.getAxis()] == obj->getBoundingBox().getMax()[ret.getAxis()]
+            && ret.getPosition()[ret.getAxis()] == obj->getBoundingBox().getMin()[ret.getAxis()]) {
+                if (obj->getNormal()[ret.getAxis()] >= 0.0) {
+                    ret.right.push_back(obj);
+                } else {
+                    ret.left.push_back(obj);
+                }
+        }
+    }
     return ret;
 
 }
 
-Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int leafSize) {
-    //change later have to get from traceui
-    int depthLimit = 0;
-    if (objList.size() <= leafSize || ++depth == depthLimit) {
+Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth) {
+    if (objList.size() <= traceUI->getLeafSize() || ++depth == traceUI->getMaxDepth()) {
         return Node(nullptr, nullptr, nullptr, objList);
     }
     splitPlane sp = findBestSplitPlane(objList, bbox);
@@ -107,51 +127,80 @@ Node buildTree(std::vector <Geometry*> objList, BoundingBox bbox, int depth, int
     if (right.empty() || left.empty()) {
         return Node(nullptr, nullptr, nullptr, objList);
     } else {
-        Node left_node = buildTree(left, sp.leftbbox, depth, leafSize);
-        Node right_node = buildTree(right, sp.rightbbox, depth, leafSize); 
+        Node left_node = buildTree(left, sp.leftbbox, depth+1);
+        Node right_node = buildTree(right, sp.rightbbox, depth+1); 
         return Node(&sp, &left_node, &right_node, vector<Geometry*>());
     }
 }
 
-bool Node::findIntersectionSplit(Node n, double tmin, double tmax)
+bool Node::findIntersectionSplit(Node n, ray &r, isect &i, double tmin, double tmax)
 {
+    if (left == nullptr && right == nullptr) {
+        return findIntersectionLeaf(r, i, tmin, tmax);
+    }
+    glm::dvec3 RDirect = r.getDirection();
+    int axis = n.plane->getAxis();
+    double LorR = RDirect[axis];
+    glm::dvec3 normal = glm::dvec3(0.0, 0.0, 0.0);
+    normal[axis] = 1.0;
+    double t = glm::dot((n.plane->getPosition() - r.getPosition()), normal)/glm::dot(r.getDirection(), normal);
+    if (!(t >= tmin && t <= tmax)) {
+        return false;
+    }
+    if (glm::abs(RDirect[axis] - n.plane->getPosition()[axis]) <= RAY_EPSILON) {
+        RDirect[axis] += RAY_EPSILON;
+    } else {
+
+    
     // if ray is nearly parallel to the split plane, calculate as near to parallel as possible
+    // basically close enough to parallel, then check if it's less than or greater than the position of the split plane axis thing
+    // and the go down that 
     // else
     //{
-        if (tmin >= n.plane->leftbbox.getMin()[n.plane->getAxis()] && tmax <= n.plane->leftbbox.getMax()[n.plane->getAxis()])
+        double t = glm::dot((n.plane->getPosition() - r.getPosition()), normal)/glm::dot(r.getDirection(), normal);
+        bool lefthit = glm::dot((r.getPosition() - n.plane->getPosition()), normal) < 0.0;
+        bool righthit = glm::dot((r.getPosition() - n.plane->getPosition()), normal) > 0.0;
+        if (lefthit && !righthit)
         {
-            if(n.leftNode, tmin, tmax)
+            
+            if(findIntersectionSplit(*(n.leftNode), r, i, tmin, tmax))
             {
                 return true;
             }
         }
-        else if (tmin >= n.plane->rightbbox.getMin()[n.plane->getAxis()] && tmax <= n.plane->rightbbox.getMax()[n.plane->getAxis()])
+        else if (!lefthit && righthit)
         {
-            if(n.rightNode, tmin, tmax)
+            if(findIntersectionSplit(*(n.rightNode), r, i, tmin, tmax))
             {
                 return true;
             }
         }
-        else
-        {
+        else 
+        {   
+             
             // find the nearest interaction, and if that's true return true
             // find the farthest interaction, and then if this is true return true
         }
-    //}
+    }
     return false;
 }
 
-void Node::findIntersectionLeaf(ray &r, isect &i, double tmin, double tmax)
+bool Node::findIntersectionLeaf(ray &r, isect &i, double tmin, double tmax)
 {
     // peekaboo!
-    isect i_c_u; 
+    bool has_inter = false;
     for (int j = 0; j < objList.size(); j++)
     {
-        if (objList.at(j)->intersect(r, i) && i_c_u.getT() >= tmin && i_c_u.getT() <= tmax)
+        isect i_c_u;
+        objList.at(j)->intersect(r, i_c_u);
+        if (objList.at(j)->intersect(r, i_c_u) && i_c_u.getT() >= tmin && i_c_u.getT() <= tmax)
         {
-            i = i_c_u;
+            if (!has_inter || i_c_u.getT() < i.getT()){
+                i.setT(i_c_u.getT());
+                has_inter = true;
+            }
         }
     }
-
+    return has_inter;
 }
 
